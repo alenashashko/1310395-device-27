@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Alena Shashko](https://up.htmlacademy.ru/htmlcss/27/user/1310395).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Мирошниченко] (https://htmlacademy.ru/profile/id591417).
 
 ---
 
