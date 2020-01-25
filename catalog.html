@@ -20,9 +20,9 @@
           <a href="">Корзина</a>
         <ul>
           <li><button type="button">Каталог товаров</button></li>
-          <li<a href="">Доставка</a></li>
-          <li<a href="">Гарантия</a></li>
-          <li<a href="">Контакты</a></li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Гарантия</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -34,6 +34,63 @@
         <li><a href="">Каталог товаров</a></li>
         <li><a>Моноподы для селфи</a></li>
       </ul>
+      <div>
+        <h2>Фильтр:</h2>
+        <form action="" method="get">
+          <label for="ratingfield">Стоимость</label>
+          от 0<input type="range" name="rating" id="ratingfield" min="0" max="10000" step="100" value="5000" > <!--?-->
+          <input type="checkbox" name="black" id="blackcolor" checked>
+          <label for="blackcolor">Черный</label>
+          <input type="checkbox" name="white" id="whitecolor">
+          <label for="whitecolor">Белый</label>
+          <input type="checkbox" name="blue" id="bluecolor" checked>
+          <label for="bluecolor">Синий</label>
+          <input type="checkbox" name="red" id="redcolor" checked>
+          <label for="redcolor">Красный</label>
+          <input type="checkbox" name="pink" id="pinkcolor" checked>
+          <label for="pinkcolor">Розовый</label>
+          <input type="radio" name="yes" id="yesfield">
+          <label for="yesfield">Есть</label>
+          <input type="radio" name="no" id="nofield">
+          <label for="nofield">Нет</label>
+          <!--Как разметить Цвет и Bluetooth не знаю-->
+          <input type="submit" value="Показать">
+        </form>
+      </div>
+      <div>
+        <!--будет дополнено-->
+        <ul>
+          <li>
+            <section>
+              <img src="" width="" height="" alt="Изображение любительской селфи-палки">
+              <a href=""><h3>Любительская селфи-палка</h3></a>
+              <p>500 руб.</p>
+            </section>
+          </li>
+          <li>
+            <section>
+              <img src="" width="" height="" alt="Изображение профессиональной селфи-палки">
+              <a href=""><h3>Профессиональная селфи-палка</h3></a>
+              <p>1500 руб.</p>
+            </section>
+          </li>
+          <li>
+            <section>
+              <img src="" width="" height="" alt="Изображение непотопляемой селфи-палки">
+              <a href=""><h3>Непотопляемая селфи-палка</h3></a>
+              <p>2500 руб.</p>
+            </section>
+          </li>
+          <li>
+            <section>
+              <img src="" width="" height="" alt="Изображение селфи-палки «Следуй за мной»">
+              <a href=""><h3>Селфи-палка «Следуй за мной»</h3></a>
+              <p>4900 руб.</p>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <!--будет дополнено-->
     </main>
 
     <footer>
@@ -48,17 +105,19 @@
       <a href="">Корзина</a>
       <p>г. Москва, ул. Строителей, 15</p>
       <ul>
-        <li<a href="">Доставка</a></li>
-        <li<a href="">Гарантия</a></li>
-        <li<a href="">Контакты</a></li>
+        <li><a href="">Доставка</a></li>
+        <li><a href="">Гарантия</a></li>
+        <li><a href="">Контакты</a></li>
       </ul>
       <p>Тел.: +7(495)495-95-95</p>
-      <ul>
-        <li<a href="">Фейсбук</a></li>
-        <li<a href="">Инстаграм</a></li>
-        <li<a href="">Твиттер</a></li>
-      </ul>
-      <a href="htmlacademy.ru/intensive/htmlcss">Профессиональный онлайн‑курс HTML и CSS, уровень 1</a>
+      <div>
+        <ul>
+          <li><a href="">Фейсбук</a></li>
+          <li><a href="">Инстаграм</a></li>
+          <li><a href="">Твиттер</a></li>
+        </ul>
+      </div>
+      <div><a href="htmlacademy.ru/intensive/htmlcss">Профессиональный онлайн‑курс HTML и CSS, уровень 1</a></div>
     </footer>
 
   </body>
