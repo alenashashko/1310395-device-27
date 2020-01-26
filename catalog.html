@@ -21,7 +21,7 @@
           <a href="#">Корзина</a>
         </div>
         <!--Блок с навигацией в отдельный div не оборачиваю-->
-        <nav class="main-navigation">
+        <nav>
           <ul>
             <li><a href="#">Каталог товаров</a></li>
             <ul> <!--ВОПРОС: все одним списком или это 3 списка? (на макете как будто 3 столбца или 3 строки)-->
@@ -43,17 +43,18 @@
       <h1>Моноподы для селфи</h1>
       <ul>
         <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li></a>Моноподы для селфи</a></li>
+        <li><a href="#">Каталог товаров</a></li>
+        <li></a title="Вы на этой странице">Моноподы для селфи</a></li>
       </ul>
-      <!--Будет дополнено-->
-      <section class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2> <!--Будет скрыт-->
+      <!--ВОПРОС: Есть ли смысл в этом section, если он единственный на странице? + получается заголовок после заголовка
+        (h3 сразу после h2), что тоже вроде как плохая идея.-->
+      <section>
+        <h2>Каталог моноподов для селфи</h2> <!--Будет скрыт-->
+        <h3>Фильтр:</h3>
         <!-- Форма предварительно
         <form action="" method="get">
           <fieldset>
-            <label for="ratingfield">Стоимость</label>
-            от 0<input type="range" name="rating" id="ratingfield" min="0" max="10000" step="100" value="5000">
+            <legend>Стоимость</legend>
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
@@ -65,7 +66,7 @@
             <label for="bluecolor">Синий</label>
             <input type="checkbox" name="red" id="redcolor" checked>
             <label for="redcolor">Красный</label>
-            <input type="checkbox" name="pink" id="pinkcolor" checked>
+            <input type="checkbox" name="pink" id="pinkcolor">
             <label for="pinkcolor">Розовый</label>
           </fieldset>
           <fieldset>
@@ -75,78 +76,89 @@
             <input type="radio" name="no" id="nofield">
             <label for="nofield">Нет</label>
           </fieldset>
-          <input type="submit" value="Показать">
-        </form>  -->
-      </section>
-      <section class="catalog">
-        <h2 class="visually-hidden">Список моноподов для селфи</h2> <!--Будет скрыт-->
-        <ul class="catalog-list">
-          <li class="catalog-item">
-              <h3>
+          <button type="submit">Показать</button>
+        </form> -->
+        <h3>Сортировка</h3> <!--этот заголовок смущает-->
+        <ul> <!--ВОПРОС: почему это ссылки, если они не ведут на другу страницу? еще смущает добавление по возврастанию/по убыванию
+        в этот же список (не отдельный), так как любой критерий (цена,тип, популярность) можно отсортировать как по возрастанию,
+        так и по убыванию. Может лучше 2 списка в диве?-->
+          <li><a title="Это выбранный критерий">По цене</a></li> <!--нажата-->
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По популярности</a></li>
+          <li><a href="#">По возрастанию</a></li>
+          <li><a title="Это выбранный критерий">По убыванию</a></li>  <!--нажата-->
+        </ul>
+        <ul>
+          <li>
+              <h4>
                 <a href="#">Любительская селфи-палка</a>
-              </h3>
-              <p class="catalog-item-image"><img src="" width="" height="" alt="Любительская селфи-палки"></p> <!--нужен ли p?-->
-              <p class="catalog-item-price">500 руб.</p>
+              </h4>
+              <img src="" width="" height="" alt="Любительская селфи-палки">
+              <p>500 руб.</p>
           </li>
-          <li class="catalog-item">
-            <h3>
+          <li>
+            <h4>
               <a href="#">Профессиональная селфи-палка</a>
-            </h3>
-            <p class="catalog-item-image"><img src="" width="" height="" alt="Профессиональная селфи-палка"></p>
-            <p class="catalog-item-price">1500 руб.</p>
+            </h4>
+            <img src="" width="" height="" alt="Профессиональная селфи-палка">
+            <p>1500 руб.</p>
           </li>
-          <li class="catalog-item">
+          <li>
             <h3>
               <a href="#">Непотопляемая селфи-палка</a>
             </h3>
-            <p class="catalog-item-image"><img src="" width="" height="" alt="Непотопляемая селфи-палка"></p>
-            <p class="catalog-item-price">2500 руб.</p>
+            <img src="" width="" height="" alt="Непотопляемая селфи-палка">
+            <p>2500 руб.</p>
           </li>
-          <li class="catalog-item">
+          <li>
             <h3>
               <a href="#">Селфи-палка «Следуй за мной»</a>
             </h3>
-            <p class="catalog-item-image"><img src="" width="" height="" alt="Селфи-палка «Следуй за мной»"></p>
-            <p class="catalog-item-price">4900 руб.</p>
+            <img src="" width="" height="" alt="Селфи-палка «Следуй за мной»">
+            <p>4900 руб.</p>
           </li>
         </ul>
-        </section>
         <!-- Предварительно
-        <button type="button">Назад</button>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-        </ul>
-        <button type="button">Вперед</button>  -->
+        <ul>
+          <li><a title="Вы на первой странице">Назад</a></li>
+          <li title="Вы на этой странице"><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">Вперед</a></li>
+        </ul>  -->
+      </section>
     </main>
 
-    <footer class="main-footer">
+    <footer>
       <a>
-        <img src="index.html" width="" height="" alt="Логотип интернет-магазина «Девайс»">
+        <img src="" width="" height="" alt="Логотип интернет-магазина «Девайс»">
       </a>
-      <ul>
-        <li><a href="#">Иконка пользователя</a></li>
-        <li><a href="#">Валентин Петухов</a></li>
-        <li><button type="button">Выйти</button></li>
-      </ul>
-      <a href="#">Сравнить</a>
-      <a href="#">Корзина</a>
-      <adress>г. Москва, ул. Строителей, 15</adress>
-      <ul>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <a href="tel:+7(495)4959595">Тел.: +7(495)495-95-95</a>
+      <div>
+        <ul>  <!--пока оставила отдельный список для блока авторизации + 2 ссылки для сравнить и корзина-->
+          <li><a href="#">Иконка пользователя</a></li>
+          <li><a href="#">Валентин Петухов</a></li>
+          <li><button type="button">Выйти</button></li>
+        </ul>
+        <a href="#">Сравнить</a>
+        <a href="#">Корзина</a>
+      </div>
+      <div>
+        <adress>г. Москва, ул. Строителей, 15</adress>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <a href="tel:+7(495)4959595">Тел.: +7(495)495-95-95</a>
+      </div>
       <div>
         <ul>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#">Твиттер</a></li>
         </ul>
-      </div>
       <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Профессиональный онлайн‑курс HTML и CSS, уровень 1</a>
+    </div>
     </footer>
 
   </body>
