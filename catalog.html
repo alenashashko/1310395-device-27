@@ -6,34 +6,45 @@
   </head>
   <body>
 
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
+    <header>
+        <a href="index.html">
           <img src="" width="" height="" alt="Логотип интернет-магазина «Девайс»">
         </a>
-        <input type="search" name="search" id="searchfield" value="Поиск по сайту">
-        <ul>
-          <li><a href="profile.html">Иконка пользователя</a></li>
-          <li><a href="profile.html">Валентин Петухов</a></li>
-          <li><button type="button">Выйти</button></li> <!--сомнения по кнопке-->
-        </ul>
-          <a href="comparison.html">Сравнить</a>
-          <a href="basket.html">Корзина</a>
-        <ul class="site-navigation">
-          <li><button type="button">Каталог товаров</button></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
+        <div>
+          <!--будет форма: кнопка поиска-->
+          <ul>  <!--пока оставила отдельный список для блока авторизации + 2 ссылки для сравнить и корзина-->
+            <li><a href="#">Иконка пользователя</a></li>
+            <li><a href="#">Валентин Петухов</a></li>
+            <li><button type="button">Выйти</button></li>
+          </ul>
+          <a href="#">Сравнить</a>
+          <a href="#">Корзина</a>
+        </div>
+        <!--Блок с навигацией в отдельный div не оборачиваю-->
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#">Каталог товаров</a></li>
+            <ul> <!--ВОПРОС: все одним списком или это 3 списка? (на макете как будто 3 столбца или 3 строки)-->
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
     </header>
 
-    <main class="container">
-      <h1 class="page-title">Моноподы для селфи</h1>
-      <ul class="breadcrumbs">
+    <main>
+      <h1>Моноподы для селфи</h1>
+      <ul>
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог товаров</a></li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
+        <li></a>Моноподы для селфи</a></li>
       </ul>
       <!--Будет дополнено-->
       <section class="filters">
@@ -72,28 +83,28 @@
         <ul class="catalog-list">
           <li class="catalog-item">
               <h3>
-                <a href="catalog-item.html">Любительская селфи-палка</a>
+                <a href="#">Любительская селфи-палка</a>
               </h3>
               <p class="catalog-item-image"><img src="" width="" height="" alt="Любительская селфи-палки"></p> <!--нужен ли p?-->
               <p class="catalog-item-price">500 руб.</p>
           </li>
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Профессиональная селфи-палка</a>
+              <a href="#">Профессиональная селфи-палка</a>
             </h3>
             <p class="catalog-item-image"><img src="" width="" height="" alt="Профессиональная селфи-палка"></p>
             <p class="catalog-item-price">1500 руб.</p>
           </li>
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Непотопляемая селфи-палка</a>
+              <a href="#">Непотопляемая селфи-палка</a>
             </h3>
             <p class="catalog-item-image"><img src="" width="" height="" alt="Непотопляемая селфи-палка"></p>
             <p class="catalog-item-price">2500 руб.</p>
           </li>
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Селфи-палка «Следуй за мной»</a>
+              <a href="#">Селфи-палка «Следуй за мной»</a>
             </h3>
             <p class="catalog-item-image"><img src="" width="" height="" alt="Селфи-палка «Следуй за мной»"></p>
             <p class="catalog-item-price">4900 руб.</p>
@@ -103,7 +114,7 @@
         <!-- Предварительно
         <button type="button">Назад</button>
         <ul class="pagination-list">
-          <li class="pagination-item" pagination-item-current><a>1</a></li>
+          <li class="pagination-item pagination-item-current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
         </ul>
@@ -115,19 +126,19 @@
         <img src="index.html" width="" height="" alt="Логотип интернет-магазина «Девайс»">
       </a>
       <ul>
-        <li><a href="profile.html">Иконка пользователя</a></li>
-        <li><a href="profile.html">Валентин Петухов</a></li>
+        <li><a href="#">Иконка пользователя</a></li>
+        <li><a href="#">Валентин Петухов</a></li>
         <li><button type="button">Выйти</button></li>
       </ul>
-      <a href="comparison.html">Сравнить</a>
-      <a href="basket.html">Корзина</a>
-      <p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
+      <a href="#">Сравнить</a>
+      <a href="#">Корзина</a>
+      <adress>г. Москва, ул. Строителей, 15</adress>
       <ul>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="guarantee.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
       </ul>
-      <p class="footer-contacts">Тел.: +7(495)495-95-95</p>
+      <a href="tel:+7(495)4959595">Тел.: +7(495)495-95-95</a>
       <div>
         <ul>
           <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -135,7 +146,7 @@
           <li><a class="social-button" href="#">Твиттер</a></li>
         </ul>
       </div>
-      <div><a class="button" href="htmlacademy.ru/intensive/htmlcss">Профессиональный онлайн‑курс HTML и CSS, уровень 1</a></div>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Профессиональный онлайн‑курс HTML и CSS, уровень 1</a>
     </footer>
 
   </body>
