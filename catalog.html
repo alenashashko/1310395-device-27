@@ -10,10 +10,13 @@
 
   <header>
     <a href="index.html">
-      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
+      <img src="img/logo-device.svg" width="163" height="35" alt="Перейти на главную страницу сайта">
     </a>
     <div>
-      <!--будет форма: кнопка поиска-->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="search_field" class="visually-hidden">Поиск</label> <!--Будет скрыт-->
+        <input type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+      </form>
       <ul>
         <li><a href="#">Иконка пользователя</a></li>
         <li><a href="#">Валентин Петухов</a></li>
@@ -26,7 +29,6 @@
       <ul>
         <li><a href="#">Каталог товаров</a>
           <ul>
-            <!--ВОПРОС: все одним списком или это 3 списка? (на макете как будто 3 столбца или 3 строки)-->
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
@@ -49,59 +51,73 @@
       <li><a href="#">Каталог товаров</a></li>
       <li><a>Моноподы для селфи</a></li>
     </ul>
-    <!--ВОПРОС: Есть ли смысл в этом section, если он единственный на странице? + получается заголовок после заголовка
-        (h3 сразу после h2), что тоже вроде как плохая идея.-->
     <section>
-      <h2>Каталог моноподов для селфи</h2>
-      <!--Будет скрыт-->
+      <h2 class="visually-hidden">Каталог моноподов для селфи</h2> <!--Будет скрыт-->
       <h3>Фильтр:</h3>
-      <!-- Форма предварительно
-        <form action="" method="get">
-          <fieldset>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset> <!--?-->
             <legend>Стоимость</legend>
+            <input type="range" name="cost" min="0" max="10000" value="5000">
+            <input type="text" name="from" value="от 0">
+            <input type="text" name="till" value="до 5000">
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
-            <input type="checkbox" name="black" id="blackcolor" checked>
-            <label for="blackcolor">Черный</label>
-            <input type="checkbox" name="white" id="whitecolor">
-            <label for="whitecolor">Белый</label>
-            <input type="checkbox" name="blue" id="bluecolor" checked>
-            <label for="bluecolor">Синий</label>
-            <input type="checkbox" name="red" id="redcolor" checked>
-            <label for="redcolor">Красный</label>
-            <input type="checkbox" name="pink" id="pinkcolor">
-            <label for="pinkcolor">Розовый</label>
+            <ul>  <!--чекбоксам value не задаю, правильно?-->
+              <li>
+                <input type="checkbox" name="black" id="black_field" checked>
+                <label for="black_field">Черный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="white" id="white_field">
+                <label for="white_field">Белый</label>
+              </li>
+              <li>
+                <input type="checkbox" name="white" id="white_field">
+                <label for="white_field">Белый</label>
+              </li>
+              <li>
+                <input type="checkbox" name="blue" id="blue_field" checked>
+                <label for="blue_field">Синий</label>
+              </li>
+              <li>
+                <input type="checkbox" name="red" id="red_field" checked>
+                <label for="red_field">Красный</label>
+              </li>
+              <li>
+                <input type="checkbox" name="pink" id="pink_field">
+                <label for="pink_field">Розовый</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Bluetooth</legend>
-            <input type="radio" name="yes" id="yesfield" checked>
-            <label for="yesfield">Есть</label>
-            <input type="radio" name="no" id="nofield">
-            <label for="nofield">Нет</label>
+            <ul>
+              <li>
+                <input type="radio" name="bluetooth_group" value="yes" id="yes_field" checked>
+                <label for="yes_field">Есть</label>
+              </li>
+              <li>
+                <input type="radio" name="bluetooth_group" value="no" id="no_field">
+                <label for="yes_field">Нет</label>
+              </li>
           </fieldset>
           <button type="submit">Показать</button>
-        </form> -->
-      <h3>Сортировка</h3>
-      <!--этот заголовок смущает-->
+        </form>
+      <h3>Сортировка:</h3>
       <ul>
-        <!--ВОПРОС: еще смущает добавление по возврастанию/по убыванию
-        в этот же список (не отдельный), так как любой критерий (цена,тип, популярность) можно отсортировать как по возрастанию,
-        так и по убыванию. Может лучше 2 списка в диве?-->
         <li><a>По цене</a></li>
-        <!--нажата-->
         <li><a href="#">По типу</a></li>
         <li><a href="#">По популярности</a></li>
         <li><a href="#">По возрастанию</a></li>
         <li><a>По убыванию</a></li>
-        <!--нажата-->
       </ul>
       <ul>
         <li>
           <h4>
             <a href="#">Любительская селфи-палка</a>
           </h4>
-          <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палки">
+          <img src="img/item-1.jpg" width="360" height="380" alt="Классический bluetooth-монопод с L-образным креплением">
           <p>500 руб.</p>
           <div>
             <a href="#">В корзину</a>
@@ -112,7 +128,7 @@
           <h4>
             <a href="#">Профессиональная селфи-палка</a>
           </h4>
-          <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+          <img src="img/item-2.jpg" width="360" height="380" alt="Селфи-палка профессионального уровня в конструкции монопод">
           <p>1500 руб.</p>
           <div>
             <a href="#">В корзину</a>
@@ -123,7 +139,7 @@
           <h4>
             <a href="#">Непотопляемая селфи-палка</a>
           </h4>
-          <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+          <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемый монопод с «трехзубым» пластиковым штативом под GoPro">
           <p>2500 руб.</p>
           <div>
             <a href="#">В корзину</a>
@@ -134,7 +150,7 @@
           <h4>
             <a href="#">Селфи-палка «Следуй за мной»</a>
           </h4>
-          <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+          <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка в виде руки «Следуй за мной»">
           <p>4900 руб.</p>
           <div>
             <a href="#">В корзину</a>
@@ -154,7 +170,7 @@
 
   <footer>
     <a>
-      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
+      <img src="img/logo-device.svg" width="163" height="35" alt="Перейти на главную страницу сайта">
     </a>
     <div>
       <ul>
@@ -188,4 +204,3 @@
 </body>
 
 </html>
-

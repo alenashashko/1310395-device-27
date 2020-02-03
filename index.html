@@ -13,7 +13,10 @@
       <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div>
-      <!--будет форма: кнопка поиска-->
+      <form action="https://echo.htmlacademy.ru" method="post"> <!--нужна ли кнопка найти?-->
+        <label for="search_field" class="visually-hidden">Поиск</label> <!--Будет скрыт-->
+        <input type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+      </form>
       <ul>
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
@@ -24,7 +27,6 @@
       <ul>
         <li><a href="#">Каталог товаров</a>
           <ul>
-            <!--ВОПРОС: все одним списком или это 3 списка? (на макете как будто 3 столбца или 3 строки)-->
             <li><a href="#">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
             <li><a href="#">Экшн-камеры</a></li>
@@ -41,12 +43,12 @@
   </header>
 
   <main>
-    <h1>Интернет-магазин «Девайс»</h1> <!-- Будет скрыт -->
+    <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1> <!-- Будет скрыт -->
     <section>
-      <h2>Лучшие предложения</h2>
+      <h2 class="visually-hidden">Лучшие предложения</h2> <!-- Будет скрыт -->
       <ul>
         <li>
-          <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи">
+          <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи длиной 8 метров и весом 5 килограмм">
           <p>
             Делай селфи,<br>
             как Бен Стиллер!
@@ -81,7 +83,6 @@
           </p>
           <a href="#">Подробнее</a>
           <table>
-            <!--ВОПРОС: таблица с одной строкой или абзац с двумя спанами?-->
             <tr>
               <th>Без подзарядки</th>
             </tr>
@@ -91,7 +92,7 @@
           </table>
         </li>
         <li>
-          <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
+          <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером">
           <p>
             Порхает как бабочка,
             жалит как пчела!
@@ -113,15 +114,26 @@
           </table>
         </li>
       </ul>
-      <!--Будет форма: радиобаттон-->
+      <ul>
+        <li>
+          <label for="slider_1_field" class="visually-hidden">Самая длинная палка для селфи</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_1" id="slider_1_field" checked>
+        </li>
+        <li>
+          <label for="slider_2_field" class="visually-hidden">Мотивирующий фитнес-браслет</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_2" id="slider_2_field">
+        </li>
+        <li>
+          <label for="slider_3_field" class="visually-hidden">Квадрокоптер с мощным лазером</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_3" id="slider_3_field">
+        </li>
+      </ul>
     </section>
     <section>
-      <h2>Каталог товаров</h2>
+      <h2 class="visually-hidden">Каталог товаров</h2> <!-- Будет скрыт -->
       <ul>
-        <!--изображения в списке декоративные-->
         <li>
           <h3>
-            <!--использую заголовки, чтобы читалки могли озвучивать разделы каталога-->
             <a href="#">Виртуальная реальность</a>
           </h3>
         </li>
@@ -153,10 +165,22 @@
       </ul>
     </section>
     <section>
-      <h2>Наши сервисы</h2>
-      <!--будет форма: радиобаттоны доставка-гарантия-кредит-->
+      <h2 class="visually-hidden">Наши сервисы</h2> <!-- Будет скрыт -->
       <ul>
-        <!--изображения в списке декоративные-->
+        <li>
+          <label for="delivery_field">Доставка</label>
+          <input type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
+        </li>
+        <li>
+          <label for="guarantee_field">Гарантия</label>
+          <input type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
+        </li>
+        <li>
+          <label for="credit_field">Кредит</label>
+          <input type="radio" name="slider2-group" value="credit" id="credit_field">
+        </li>
+      </ul>
+      <ul>
         <li>
           <h3>Доставка</h3>
           <p>
@@ -184,7 +208,7 @@
       </ul>
     </section>
     <section>
-      <h2>Наши бренды</h2>
+      <h2 class="visually-hidden">Наши бренды</h2> <!-- Будет скрыт -->
       <ul>
         <li>
           <a href="#">
@@ -235,10 +259,9 @@
         проверить работоспособность покупки. Всякое бывает.
       </p>
       <a href="#">
-        <img src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
-        <img src="img/map-big.png" width="960" height="559" alt="Карта офиса по адресу улица Строителей, 15">
+        <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу улица Строителей 15, Москва">
       </a>
-      <button type="button">Напишите нам</button>
+      <a href="#">Напишите нам</a> <!--на случай не срабатывания JS-->
     </section>
   </main>
 
@@ -274,16 +297,24 @@
   </footer>
 
   <section>
-    <h2>Напишите нам</h2> <!-- Будет скрыт -->
-    <!--Здесь будет форма-->
+    <h2 class="visually-hidden">Напишите нам</h2> <!-- Будет скрыт -->
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="name_field">Ваше имя:</label>
+      <input type="text" name="name" id="name_field" placeholder="Имя Фамилия">
+      <label for="e-mail_field">Ваш e-mail:</label>
+      <input type="text" name="e-mail" id="e-mail_field" placeholder="email@example.com">
+      <label for="letter_field">Текст письма:</label>
+      <textarea name="letter" id="letter_field" rows="8" placeholder="В свободной форме"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
     <button type="button">Закрыть</button>
   </section>
   <section>
-    <h2>Как до нас добраться</h2> <!-- Будет скрыт -->
+    <h2 class="visually-hidden">Как до нас добраться</h2> <!-- Будет скрыт -->
+    <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу улица Строителей 15, Москва">
     <button type="button">Закрыть</button>
   </section>
 
 </body>
 
 </html>
-
