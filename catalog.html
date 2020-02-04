@@ -9,13 +9,14 @@
 <body>
 
   <header>
-    <a href="index.html">
-      <img src="img/logo-device.svg" width="163" height="35" alt="Перейти на главную страницу сайта">
+    <a href="index.html" aria-label="Перейти на главную страницу сайта">
+      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div>
       <form action="https://echo.htmlacademy.ru" method="post">
         <label for="search_field" class="visually-hidden">Поиск</label> <!--Будет скрыт-->
         <input type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+        <button type="submit">Найти</button>
       </form>
       <ul>
         <li><a href="#">Иконка пользователя</a></li>
@@ -57,20 +58,15 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset> <!--?-->
             <legend>Стоимость</legend>
-            <input type="range" name="cost" min="0" max="10000" value="5000">
             <input type="number" name="min" value="от 0">
             <input type="number" name="max" value="до 5000">
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
-            <ul>  <!--чекбоксам value не задаю, правильно?-->
+            <ul>
               <li>
                 <input type="checkbox" name="black" id="black_field" checked>
                 <label for="black_field">Черный</label>
-              </li>
-              <li>
-                <input type="checkbox" name="white" id="white_field">
-                <label for="white_field">Белый</label>
               </li>
               <li>
                 <input type="checkbox" name="white" id="white_field">
@@ -101,6 +97,7 @@
                 <input type="radio" name="bluetooth_group" value="no" id="no_field">
                 <label for="yes_field">Нет</label>
               </li>
+            </ul>
           </fieldset>
           <button type="submit">Показать</button>
         </form>
@@ -169,8 +166,8 @@
   </main>
 
   <footer>
-    <a>
-      <img src="img/logo-device.svg" width="163" height="35" alt="Перейти на главную страницу сайта">
+    <a href="index.html" aria-label="Перейти на главную страницу сайта">
+      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div>
       <ul>
