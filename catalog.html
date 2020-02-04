@@ -19,7 +19,8 @@
         <button type="submit">Найти</button>
       </form>
       <ul>
-        <li><a href="#">Иконка пользователя</a></li>
+        <li><a href="#">Иконка пользователя</a></li> <!--ВОПРОС: Читает "Иконка пользователя". Заменить на "Мой профиль" либо удалить
+          этот элемент?-->
         <li><a href="#">Валентин Петухов</a></li>
         <li><a href="#">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
@@ -56,10 +57,16 @@
       <h2 class="visually-hidden">Каталог моноподов для селфи</h2> <!--Будет скрыт-->
       <h3>Фильтр:</h3>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset> <!--?-->
+          <fieldset>
             <legend>Стоимость</legend>
-            <input type="number" name="min" value="от 0">
-            <input type="number" name="max" value="до 5000">
+            <div>
+              <button type="button"></button>
+              <button type="button"></button>
+            </div>
+            <label for="minvalue">от</label>
+            <input type="text" name="min" id="minvalue" value="0">
+            <label for="maxvalue">до</label>
+            <input type="text" name="max" id="maxvalue" value="5000">
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
@@ -109,6 +116,7 @@
         <li><a href="#">По возрастанию</a></li>
         <li><a>По убыванию</a></li>
       </ul>
+      <h3 class="visually-hidden">Моноподы</h3> <!--Будет скрыт-->
       <ul>
         <li>
           <h4>
@@ -171,7 +179,8 @@
     </a>
     <div>
       <ul>
-        <li><a href="#">Иконка пользователя</a></li>
+        <li><a href="#">Иконка пользователя</a></li> <!--ВОПРОС: Читает "Иконка пользователя". Заменить на "Мой профиль" либо удалить
+          этот элемент?-->
         <li><a href="#">Валентин Петухов</a></li>
         <li><a href="#">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
@@ -189,12 +198,13 @@
     </div>
     <div>
       <ul>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
-        <li><a href="#">Твиттер</a></li>
+        <li><a href="#" aria-label="Фейсбук"></a></li>
+        <li><a href="#" aria-label="Инстаграм"></a></li>
+        <li><a href="#" aria-label="Твиттер"></a></li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Профессиональный онлайн курс HTML и CSS,
-        уровень 1</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн курс HTML и CSS, уровень 1" target="_blank">
+      <img src="img/logo-html.svg" width="27" height="35" alt="Логотип «HTML Academy»">
+      </a>
     </div>
   </footer>
 

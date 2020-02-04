@@ -49,6 +49,20 @@
       <h2 class="visually-hidden">Лучшие предложения</h2> <!-- Будет скрыт -->
       <ul>
         <li>
+          <label for="slider_1_field" class="visually-hidden">Самая длинная палка для селфи</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_1" id="slider_1_field" checked>
+        </li>
+        <li>
+          <label for="slider_2_field" class="visually-hidden">Мотивирующий фитнес-браслет</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_2" id="slider_2_field">
+        </li>
+        <li>
+          <label for="slider_3_field" class="visually-hidden">Квадрокоптер с мощным лазером</label> <!--Будет скрыт-->
+          <input type="radio" name="slider-group" value="slider_3" id="slider_3_field">
+        </li>
+      </ul>
+      <ul>
+        <li>
           <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи длиной 8 метров и весом 5 килограмм">
           <p>
             Делай селфи,<br>
@@ -115,53 +129,45 @@
           </table>
         </li>
       </ul>
-      <ul>
-        <li>
-          <label for="slider_1_field" class="visually-hidden">Самая длинная палка для селфи</label> <!--Будет скрыт-->
-          <input type="radio" name="slider-group" value="slider_1" id="slider_1_field" checked>
-        </li>
-        <li>
-          <label for="slider_2_field" class="visually-hidden">Мотивирующий фитнес-браслет</label> <!--Будет скрыт-->
-          <input type="radio" name="slider-group" value="slider_2" id="slider_2_field">
-        </li>
-        <li>
-          <label for="slider_3_field" class="visually-hidden">Квадрокоптер с мощным лазером</label> <!--Будет скрыт-->
-          <input type="radio" name="slider-group" value="slider_3" id="slider_3_field">
-        </li>
-      </ul>
     </section>
     <section>
       <h2 class="visually-hidden">Каталог товаров</h2> <!-- Будет скрыт -->
-      <ul>
+      <ul> <!--Тут читает "Виртуальная реальность каталог очков виртуальной реальности". Как можно исправить?-->
         <li>
-          <h3>
-            <a href="#">Виртуальная реальность</a>
-          </h3>
+          <a href="#">
+            <h3>Виртуальная реальность</h3>
+            <img src="img/popular-1.svg" width="97" height="55" alt="Каталог очков виртуальной реальности">
+          </a>
         </li>
         <li>
-          <h3>
-            <a href="catalog.html">Моноподы для селфи</a>
-          </h3>
+          <a href="#">
+            <h3>Моноподы для селфи</h3>
+            <img src="img/popular-2.svg" width="86" height="117" alt="Каталог моноподов для селфи">
+          </a>
         </li>
         <li>
-          <h3>
-            <a href="#">Экшн-камеры</a>
-          </h3>
+          <a href="#">
+            <h3>Экшн-камеры</h3>
+            <img src="img/popular-3.svg" width="71" height="87" alt="Каталог экшн-камер">
+          </a>
         </li>
         <li>
-          <h3>
-            <a href="#">Фитнес-браслеты</a>
-          </h3>
+          <a href="#">
+            <h3>Фитнес-браслеты</h3>
+            <img src="img/popular-4.svg" width="107" height="65" alt="Каталог фитнес-браслетов">
+          </a>
         </li>
         <li>
-          <h3>
-            <a href="#">Умные часы</a>
-          </h3>
+          <a href="#">
+            <h3>Умные часы</h3>
+            <img src="img/popular-5.svg" width="56" height="98" alt="Каталог умных часов">
+          </a>
         </li>
         <li>
-          <h3>
-            <a href="#">Квадрокоптеры</a>
-          </h3>
+          <a href="#">
+            <h3>Квадрокоптеры</h3>
+            <img src="img/popular-6.svg" width="132" height="69" alt="Каталог квадрокоптеров">
+          </a>
         </li>
       </ul>
     </section>
@@ -210,7 +216,7 @@
     </section>
     <section>
       <h2 class="visually-hidden">Наши бренды</h2> <!-- Будет скрыт -->
-      <ul>
+      <ul> <!--ВОПРОС: тут читает DJI и другие alt 2 раза-->
         <li>
           <a href="#">
             <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
@@ -288,12 +294,13 @@
     </div>
     <div>
       <ul>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
-        <li><a href="#">Твиттер</a></li>
+        <li><a href="#" aria-label="Фейсбук"></a></li>
+        <li><a href="#" aria-label="Инстаграм"></a></li>
+        <li><a href="#" aria-label="Твиттер"></a></li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">Профессиональный онлайн курс HTML и CSS,
-        уровень 1</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн курс HTML и CSS, уровень 1" target="_blank">
+        <img src="img/logo-html.svg" width="27" height="35" alt="Логотип «HTML Academy»">
+      </a>
     </div>
   </footer>
 
