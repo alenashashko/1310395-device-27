@@ -41,6 +41,7 @@ body {
 
   font-family: "OpenSans", Arial, sans-serif;
   font-size: 15px;
+  letter-spacing: 0.15px;
   line-height: 30px;
   font-weight: 300;
   color: #464646;
@@ -63,6 +64,41 @@ a {
   overflow: hidden;
 }
 
+.control {
+  position: relative;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  line-height: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.control::after { /*не работает*/
+  content: "";
+  position: absolute;
+  top: 40%;
+
+  width: 220px;
+  height: 8px;
+
+  background-color: #f0c52e;
+}
+
+.control-effect:hover,
+.control-effect:focus {
+  background-color: #f0c52e;
+}
+
+.control-effect:active {
+  background-color: #f0c52e;
+  color:rgba(0, 0, 0, 0.3); /*если пишу просто opacity: 0.3,
+  то при нажатии светлеет с текстом и фон*/
+}
+
 /* Стили для тега header */
 
 .header {
@@ -70,6 +106,8 @@ a {
 }
 
 input[type="search"] {
+  color: #000000;
+
   background-color: #f0c52e;
   border: none;
   opacity: 0.3;
@@ -81,12 +119,13 @@ input[type="search"] {
 }
 
 .user-navigation a {
-  color: #464646;
+  color: #000000;
 }
 
 .main-navigation a {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
+  letter-spacing: 3.6px;
   line-height: 24px;
   font-weight: 800;
   color: #000000;
@@ -94,8 +133,9 @@ input[type="search"] {
 }
 
 .header-catalog-item a {
-  font-family: "OpenSans", Arial, sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 15px;
+  letter-spacing: 0.15px;
   line-height: 36px;
   font-weight: 300;
   color: #000000;
@@ -103,11 +143,62 @@ input[type="search"] {
 }
 
 .user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation a:focus,
+.main-navigation a:hover,
+.main-navigation a:focus {
   opacity: 0.6;
 }
 
-.user-navigation a:visited {
+.user-navigation a:active,
+.main-navigation a:active {
+  opacity: 0.3;
+}
+
+input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+input[type="search"]:focus {
+  opacity: 1;
+}
+
+.header-button { /*при фокусе в поле ввода
+  найти не появляется - не знаю почему*/
+  display: none;
+}
+
+input[type="search"]:focus .header-button {
+  display: inline;
+
+  text-align: center;
+  color: #000000;
+
+  background-color: #f0c52e;
+  border: 2px solid #000000;
+}
+
+.header-button:hover {
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #000000;
+  border: 2px solid #000000;
+}
+
+.header-button:active {
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #000000;
+  border: 2px solid #000000;
+  opacity: 0.3;
+}
+
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active {
   opacity: 0.3;
 }
 
@@ -119,8 +210,9 @@ input[type="search"] {
 }
 
 .hits-item-slogan {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
+  letter-spacing: 0.47px;
   line-height: 56px;
   font-weight: 800;
   color: #000000;
@@ -128,16 +220,22 @@ input[type="search"] {
 
 .hits-list th {
   font-size: 13px;
+  letter-spacing: 0.13px;
   line-height: 20px;
   font-weight: 300;
 }
 
 .hits-list td {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 36px;
+  letter-spacing: 0.36px;
   line-height: 48px;
   font-weight: 300;
   color: #000000;
+}
+
+.hits-list tr:first-of-type { /*не получается поменять местами ряды таблицы*/
+  order: 1;
 }
 
 /* Стили для section Каталог товаров */
@@ -147,7 +245,7 @@ input[type="search"] {
 }
 
 .catalog-item h3 {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -172,11 +270,17 @@ input[type="search"] {
 }
 
 .services-item h3 {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
   color: #000000;
+}
+
+.services .control-effect:active {
+  color: #f7e184;
+
+  background-color: #000000;
 }
 
 /* Стили для секции Наши бренды */
@@ -192,7 +296,7 @@ input[type="search"] {
 }
 
 .about-us h2 {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -200,7 +304,7 @@ input[type="search"] {
 }
 
 .partners-item {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 800;
@@ -209,7 +313,7 @@ input[type="search"] {
 
 /* Стили для секции Контакты */
 .contacts h2 {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -239,7 +343,7 @@ input[type="search"] {
 }
 
 .footer-navigation a {
-  font-family: "Gilroy", Tahoma, sans-serif;
+  font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;

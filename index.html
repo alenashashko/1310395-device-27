@@ -11,14 +11,14 @@
 <body>
 
   <header class="header">
-    <a>
+    <a class="header-logo">
       <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div class="site-navigation">
       <form action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="search_field">Поиск</label> <!--Будет скрыт-->
         <input type="search" name="search" id="search_field" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
+        <button class="header-button" type="submit">Найти</button>
       </form>
       <ul class="user-navigation">
         <li><a href="#">Войти</a></li>
@@ -74,7 +74,7 @@
             Самая длинная палка для селфи доступна в нашем магазине.
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <a href="#">Подробнее</a>
+          <a class="control control-effect" href="#">Подробнее</a>
           <table>
             <tr>
               <th>Длина палки</th>
@@ -98,7 +98,7 @@
             Мотивирующие фитнес-браслеты помогут найти в себе силы
             не пропускать занятия и соблюдать диету.
           </p>
-          <a href="#">Подробнее</a>
+          <a class="control control-effect" href="#">Подробнее</a>
           <table>
             <tr>
               <th>Без подзарядки</th>
@@ -118,7 +118,7 @@
             Этот обычный, на первый взгляд, квадрокоптер оснащен
             мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <a href="#">Подробнее</a>
+          <a class="control control-effect" href="#">Подробнее</a>
           <table>
             <tr>
               <th>Длительность полета</th>
@@ -189,15 +189,15 @@
       <h2 class="visually-hidden">Наши сервисы</h2> <!-- Будет скрыт -->
       <ul class="services-control-list">
         <li>
-          <label for="delivery_field">Доставка</label>
+          <label class="control control-effect" for="delivery_field">Доставка</label>
           <input type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
         </li>
         <li>
-          <label for="guarantee_field">Гарантия</label>
+          <label class="control control-effect" for="guarantee_field">Гарантия</label>
           <input type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
         </li>
         <li>
-          <label for="credit_field">Кредит</label>
+          <label class="control control-effect" for="credit_field">Кредит</label>
           <input type="radio" name="slider2-group" value="credit" id="credit_field">
         </li>
       </ul>
@@ -272,7 +272,7 @@
         <li class="partners-item">Автотрейдинг</li>
         <li class="partners-item">ЖелДорЭкспедиция</li>
       </ul>
-      <a href="#">Подробнее о нас</a>
+      <a class="control" href="#">Подробнее о нас</a>
     </section>
     <section class="contacts">
       <h2>Контакты</h2>
@@ -284,7 +284,7 @@
           <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу улица Строителей 15, Москва">
         </a>
       </div>
-      <a href="#">Напишите нам</a> <!--на случай не срабатывания JS-->
+      <a class="control" href="#">Напишите нам</a> <!--на случай не срабатывания JS-->
     </section>
   </main>
 
