@@ -10,32 +10,32 @@
 
 <body>
 
-  <header>
+  <header class="header">
     <a>
       <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
-    <div>
+    <div class="site-navigation">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="search_field" class="visually-hidden">Поиск</label> <!--Будет скрыт-->
+        <label class="visually-hidden" for="search_field">Поиск</label> <!--Будет скрыт-->
         <input type="search" name="search" id="search_field" placeholder="Поиск по сайту">
         <button type="submit">Найти</button>
       </form>
-      <ul>
+      <ul class="user-navigation">
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
     </div>
-    <nav>
+    <nav class="main-navigation">
       <ul>
-        <li><a href="#">Каталог товаров</a>
-          <ul>
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-            <li><a href="#">Квадрокоптеры</a></li>
+        <li class="header-catalog"><a href="#">Каталог товаров</a>
+          <ul class="header-catalog-list">
+            <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
+            <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+            <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
+            <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li class="header-catalog-item">
+            <li class="header-catalog-item"><a href="#">Умные часы</a></li>
+            <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
         <li><a href="#">Доставка</a></li>
@@ -47,9 +47,9 @@
 
   <main>
     <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1> <!-- Будет скрыт -->
-    <section>
+    <section class="hits">
       <h2 class="visually-hidden">Лучшие предложения</h2> <!-- Будет скрыт -->
-      <ul>
+      <ul class="hits-control-list">
         <li>
           <label for="slider_1_field" class="visually-hidden">Самая длинная палка для селфи</label> <!--Будет скрыт-->
           <input type="radio" name="slider-group" value="slider_1" id="slider_1_field" checked>
@@ -63,10 +63,10 @@
           <input type="radio" name="slider-group" value="slider_3" id="slider_3_field">
         </li>
       </ul>
-      <ul>
+      <ul class="hits-list">
         <li>
           <img src="img/slider-1.png" width="384" height="486" alt="Палка для селфи длиной 8 метров и весом 5 килограмм">
-          <p>
+          <p class="hits-item-slogan">
             Делай селфи,<br>
             как Бен Стиллер!
           </p>
@@ -132,50 +132,62 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="catalog">
       <h2 class="visually-hidden">Каталог товаров</h2> <!-- Будет скрыт -->
-      <ul> <!--Тут читает "Виртуальная реальность каталог очков виртуальной реальности". Как можно исправить?-->
-        <li>
+      <ul class="catalog-list"> <!--Тут читает "Виртуальная реальность каталог очков виртуальной реальности". Как можно исправить?-->
+        <li class="catalog-item">
           <a href="#">
             <h3>Виртуальная реальность</h3>
-            <img src="img/popular-1.svg" width="97" height="55" alt="Каталог очков виртуальной реальности">
-          </a>
+            <div class="catalog-item-img">
+              <img src="img/popular-1.svg" width="97" height="55" alt="Каталог очков виртуальной реальности">
+            </div>
+            </a>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             <h3>Моноподы для селфи</h3>
-            <img src="img/popular-2.svg" width="86" height="117" alt="Каталог моноподов для селфи">
+            <div class="catalog-item-img">
+              <img src="img/popular-2.svg" width="86" height="117" alt="Каталог моноподов для селфи">
+            </div>
           </a>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             <h3>Экшн-камеры</h3>
-            <img src="img/popular-3.svg" width="71" height="87" alt="Каталог экшн-камер">
+            <div class="catalog-item-img">
+              <img src="img/popular-3.svg" width="71" height="87" alt="Каталог экшн-камер">
+            </div>
           </a>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             <h3>Фитнес-браслеты</h3>
-            <img src="img/popular-4.svg" width="107" height="65" alt="Каталог фитнес-браслетов">
+            <div class="catalog-item-img">
+              <img src="img/popular-4.svg" width="107" height="65" alt="Каталог фитнес-браслетов">
+            </div>
           </a>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             <h3>Умные часы</h3>
-            <img src="img/popular-5.svg" width="56" height="98" alt="Каталог умных часов">
+            <div class="catalog-item-img">
+              <img src="img/popular-5.svg" width="56" height="98" alt="Каталог умных часов">
+            </div>
           </a>
         </li>
-        <li>
+        <li class="catalog-item">
           <a href="#">
             <h3>Квадрокоптеры</h3>
-            <img src="img/popular-6.svg" width="132" height="69" alt="Каталог квадрокоптеров">
+            <div class="catalog-item-img">
+              <img src="img/popular-6.svg" width="132" height="69" alt="Каталог квадрокоптеров">
+            </div>
           </a>
         </li>
       </ul>
     </section>
-    <section>
+    <section class="services">
       <h2 class="visually-hidden">Наши сервисы</h2> <!-- Будет скрыт -->
-      <ul>
+      <ul class="services-control-list">
         <li>
           <label for="delivery_field">Доставка</label>
           <input type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
@@ -189,8 +201,8 @@
           <input type="radio" name="slider2-group" value="credit" id="credit_field">
         </li>
       </ul>
-      <ul>
-        <li>
+      <ul class="services-list">
+        <li class="services-item">
           <h3>Доставка</h3>
           <p>
             Мы с удовольствием доставим ваш товар прямо к вашему
@@ -198,7 +210,7 @@
             заработаем, поднимая его на ваш этаж.
           </p>
         </li>
-        <li>
+        <li class="services-item">
           <h3>Гарантия</h3>
           <p>
             Если из-за возгорания купленного у нас товара у вас сгорит
@@ -206,7 +218,7 @@
             Товар, не дом, конечно же.
           </p>
         </li>
-        <li>
+        <li class="services-item">
           <h3>Кредит</h3>
           <p>
             Залезть в долговую яму стало проще! Кредитные
@@ -216,9 +228,9 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="brands">
       <h2 class="visually-hidden">Наши бренды</h2> <!-- Будет скрыт -->
-      <ul> <!--ВОПРОС: тут читает DJI и другие alt 2 раза-->
+      <ul class="brands-list"> <!--ВОПРОС: тут читает DJI и другие alt 2 раза-->
         <li>
           <a href="#">
             <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
@@ -245,7 +257,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section class="about-us">
       <h2>О нас</h2>
       <p>
         Огромный выбор гаджетов не оставит равнодушным гика,
@@ -255,46 +267,48 @@
         Мы можем доставить ваш товар в самые отдаленные точки
         Росии! DEVICE работает со многими транспортными компаниями:
       </p>
-      <ul>
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
+      <ul class="partners-list">
+        <li class="partners-item">Деловые Линии</li>
+        <li class="partners-item">Автотрейдинг</li>
+        <li class="partners-item">ЖелДорЭкспедиция</li>
       </ul>
       <a href="#">Подробнее о нас</a>
     </section>
-    <section>
+    <section class="contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
         проверить работоспособность покупки. Всякое бывает.
       </p>
-      <a href="#">
-        <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу улица Строителей 15, Москва">
-      </a>
+      <div class="map-content">
+        <a href="#">
+          <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу улица Строителей 15, Москва">
+        </a>
+      </div>
       <a href="#">Напишите нам</a> <!--на случай не срабатывания JS-->
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <a>
       <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div>
-      <ul>
+      <ul class="footer-user-navigation">
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
     </div>
     <div>
-      <address>г. Москва, ул. Строителей, 15</address>
-      <ul>
+      <address class="footer-address">г. Москва, ул. Строителей, 15</address>
+      <ul class="footer-navigation">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <a href="tel:+74954959595">Тел.: +7(495)495-95-95</a>
+      <a class="footer-contact"href="tel:+74954959595">Тел.: +7(495)495-95-95</a>
     </div>
-    <div>
+    <div class="footer-social">
       <ul>
         <li><a href="#" aria-label="Фейсбук"></a></li>
         <li><a href="#" aria-label="Инстаграм"></a></li>

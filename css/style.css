@@ -2,8 +2,8 @@
   font-family: "Gilroy";
   font-weight: 800;
   font-style: normal;
-  /* font-display: swap;  */
   src:
+  /* local, font-display ?? */
     url('../fonts/gilroyextrabold.woff') format('woff'),
     url('../fonts/gilroyextrabold.woff2') format('woff2');
 }
@@ -12,7 +12,6 @@
   font-family: "Gilroy";
   font-weight: 300;
   font-style: normal;
-  /* font-display: swap;  */
   src:
     url('../fonts/gilroylight.woff') format('woff'),
     url('../fonts/gilroylight.woff2') format('woff2');
@@ -22,7 +21,6 @@
   font-family: "OpenSans";
   font-weight: 400;
   font-style: normal;
-  /* font-display: swap;  */
   src:
     url('../fonts/opensans.woff') format('woff'),
     url('../fonts/opensans.woff2') format('woff2');
@@ -32,8 +30,232 @@
   font-family: "OpenSans";
   font-weight: 300;
   font-style: normal;
-  /* font-display: swap;  */
   src:
     url('../fonts/opensanslight.woff') format('woff'),
     url('../fonts/opensanslight.woff2') format('woff2');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Стили для тега header */
+
+.header {
+  background-color: #f0c52e;
+}
+
+input[type="search"] {
+  background-color: #f0c52e;
+  border: none;
+  opacity: 0.3;
+}
+
+.user-navigation,
+.main-navigation li {
+  list-style: none;
+}
+
+.user-navigation a {
+  color: #464646;
+}
+
+.main-navigation a {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.header-catalog-item a {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #000000;
+  text-transform: none;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+  opacity: 0.6;
+}
+
+.user-navigation a:visited {
+  opacity: 0.3;
+}
+
+/* Стили для section Лучшие предложения */
+
+.hits-control-list,
+.hits-list {
+  list-style: none;
+}
+
+.hits-item-slogan {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.hits-list th {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.hits-list td {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #000000;
+}
+
+/* Стили для section Каталог товаров */
+
+.catalog-list{
+  list-style: none;
+}
+
+.catalog-item h3 {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.catalog-item-img {
+  width: 160px;
+  height: 160px;
+  text-align: center;
+
+  background-color: #f0c52e;
+}
+
+/* Стили для section Наши сервисы */
+
+.services {background-color: #e5e5e5;}
+
+.services-control-list,
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* Стили для секции Наши бренды */
+
+.brands-list {
+  list-style: none;
+}
+
+/* Стили для секции О нас */
+
+.partners-list {
+  list-style: none;
+}
+
+.about-us h2 {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.partners-item {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* Стили для секции Контакты */
+.contacts h2 {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.map-content { /*не получается задать фон на случай, если карта не загр*/
+  background-color: #cccccc;
+}
+
+/* Стили для гега footer */
+
+.footer {
+  background-color: #464646;
+}
+
+.footer-user-navigation,
+.footer-navigation,
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-user-navigation a {
+  color: #ffffff;
+  line-height: 36px;
+  opacity: 0.7;
+}
+
+.footer-navigation a {
+  font-family: "Gilroy", Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-address {
+  font-style: normal;
+  color: #ffffff;
+}
+
+.footer-contact {
+  color: #ffffff;
+}
+
+.footer-social {
+  text-align: center;
 }
