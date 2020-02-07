@@ -106,11 +106,10 @@ a {
 }
 
 input[type="search"] {
-  color: #000000;
+  color: rgba(0, 0, 0, 0.3);
 
   background-color: #f0c52e;
   border: none;
-  opacity: 0.3;
 }
 
 .user-navigation,
@@ -163,7 +162,7 @@ input[type="search"]:focus {
 }
 
 .header-button { /*при фокусе в поле ввода
-  найти не появляется - не знаю почему*/
+  найти не появляется - не знаю где ошибка*/
   display: none;
 }
 
@@ -247,6 +246,7 @@ input[type="search"]:focus .header-button {
 .catalog-item h3 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
+  letter-spacing: 0.18px;
   line-height: 24px;
   font-weight: 800;
   color: #000000;
@@ -257,7 +257,16 @@ input[type="search"]:focus .header-button {
   height: 160px;
   text-align: center;
 
-  background-color: #f0c52e;
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.catalog-item-img:hover,
+.catalog-item-img:focus {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.catalog-item-img:active img{
+  opacity: 0.3;
 }
 
 /* Стили для section Наши сервисы */
@@ -272,6 +281,7 @@ input[type="search"]:focus .header-button {
 .services-item h3 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
+  letter-spacing: 0.47px;
   line-height: 48px;
   font-weight: 800;
   color: #000000;
@@ -289,6 +299,18 @@ input[type="search"]:focus .header-button {
   list-style: none;
 }
 
+/* не работает
+
+.brands-logo-color {
+  display: none;
+}
+
+.brands-logo:hover .brands-logo-color,
+.brands-logo:focus .brands-logo-color{
+  display: block;
+}
+*/
+
 /* Стили для секции О нас */
 
 .partners-list {
@@ -298,6 +320,7 @@ input[type="search"]:focus .header-button {
 .about-us h2 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
+  letter-spacing: 0.47px;
   line-height: 48px;
   font-weight: 800;
   color: #000000;
@@ -315,16 +338,17 @@ input[type="search"]:focus .header-button {
 .contacts h2 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
+  letter-spacing: 0.47px;
   line-height: 48px;
   font-weight: 800;
   color: #000000;
 }
 
-.map-content { /*не получается задать фон на случай, если карта не загр*/
+.map-content { /* фон на случай, если карта не загр*/
   background-color: #cccccc;
 }
 
-/* Стили для гега footer */
+/* Стили для тега footer */
 
 .footer {
   background-color: #464646;
@@ -337,14 +361,14 @@ input[type="search"]:focus .header-button {
 }
 
 .footer-user-navigation a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
   line-height: 36px;
-  opacity: 0.7;
 }
 
 .footer-navigation a {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
+  letter-spacing: 3.6px;
   line-height: 24px;
   font-weight: 800;
   color: #ffffff;
@@ -352,14 +376,71 @@ input[type="search"]:focus .header-button {
 }
 
 .footer-address {
+  letter-spacing: normal;
   font-style: normal;
   color: #ffffff;
 }
 
 .footer-contact {
+  letter-spacing: normal;
+  text-align: right;
   color: #ffffff;
 }
 
 .footer-social {
   text-align: center;
 }
+
+/* Стили для модального окна Напишите нам */
+
+.write-us {
+  background-color: rgba(4, 6, 6, 0.2);
+}
+
+.feedback-field-title {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  letter-spacing: normal;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.feedback-field {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 18px;
+  font-weight: normal;
+  color: rgba(70, 70, 70, 0.4);
+
+  background-color: #f2f2f2;
+}
+
+.feedback button {
+  border: none;
+}
+
+.feedback-field:hover {
+  background-color: #eaeaea;
+}
+
+.feedback-field:focus {
+  color: #464646;
+
+  background-color: #ffffff;
+  border: 3px solid #f0c52e;
+}
+
+.feedback-field:invalid {
+  background-color: #f6dada;
+}
+
+
+
+
+
+
+
+
+

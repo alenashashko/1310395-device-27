@@ -12,7 +12,7 @@
 
   <header class="header">
     <a class="header-logo">
-      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
+      <img src="img/header-logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div class="site-navigation">
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -233,8 +233,8 @@
       <ul class="brands-list"> <!--ВОПРОС: тут читает DJI и другие alt 2 раза-->
         <li>
           <a href="#">
-            <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
-            <img src="img/color_logo-1.jpg" width="260" height="100" alt="DJI">
+            <img class="brands-logo" src="img/logo-1.jpg" width="260" height="100" alt="DJI">
+            <img class="brands-logo-color" src="img/color_logo-1.jpg" width="260" height="100" alt="DJI">
           </a>
         </li>
         <li>
@@ -289,8 +289,8 @@
   </main>
 
   <footer class="footer">
-    <a>
-      <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
+    <a class="footer-logo">
+      <img src="img/footer-logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
     </a>
     <div>
       <ul class="footer-user-navigation">
@@ -320,20 +320,20 @@
     </div>
   </footer>
 
-  <section>
+  <section class="feedback">
     <h2 class="visually-hidden">Напишите нам</h2> <!-- Будет скрыт -->
     <form action="https://echo.htmlacademy.ru" method="post">
-      <label for="name_field">Ваше имя:</label>
-      <input type="text" name="name" id="name_field" placeholder="Имя Фамилия">
-      <label for="e-mail_field">Ваш e-mail:</label>
-      <input type="text" name="e-mail" id="e-mail_field" placeholder="email@example.com">
-      <label for="letter_field">Текст письма:</label>
-      <textarea name="letter" id="letter_field" rows="8" placeholder="В свободной форме"></textarea>
-      <button type="submit">Отправить</button>
+      <label class="feedback-field-title" for="name_field">Ваше имя:</label>
+      <input class="feedback-field" type="text" name="name" id="name_field" placeholder="Имя Фамилия">
+      <label  class="feedback-field-title" for="e-mail_field">Ваш e-mail:</label>
+      <input class="feedback-field" type="email" name="e-mail" id="e-mail_field" placeholder="email@example.com">
+      <label  class="feedback-field-title"for="letter_field">Текст письма:</label>
+      <textarea class="feedback-field" name="letter" id="letter_field" rows="8" placeholder="В свободной форме"></textarea>
+      <button class="control" type="submit">Отправить</button>
       <button type="reset">Закрыть</button>
     </form>
   </section>
-  <section>
+  <section class="map">
     <h2 class="visually-hidden">Как до нас добраться</h2> <!-- Будет скрыт -->
     <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу улица Строителей 15, Москва">
     <button type="button">Закрыть</button>
