@@ -64,8 +64,9 @@ a {
   overflow: hidden;
 }
 
-.control {
+/* .control {
   position: relative;
+  z-index: 1;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
@@ -77,15 +78,33 @@ a {
   text-transform: uppercase;
 }
 
-.control::after { /*не работает*/
+.control::after { не работает z-index
   content: "";
   position: absolute;
-  top: 40%;
+  left: 0px;
+  top: 8px;
 
   width: 220px;
   height: 8px;
 
   background-color: #f0c52e;
+} */
+
+.control {
+  display: block;
+  width: 200px;
+  height: 40px;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  line-height: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%)
 }
 
 .control-effect:hover,
@@ -95,8 +114,7 @@ a {
 
 .control-effect:active {
   background-color: #f0c52e;
-  color:rgba(0, 0, 0, 0.3); /*если пишу просто opacity: 0.3,
-  то при нажатии светлеет с текстом и фон*/
+  color:rgba(0, 0, 0, 0.3);
 }
 
 /* Стили для тега header */
@@ -238,6 +256,10 @@ a {
   order: 1;
 }
 
+.hits-list .control {
+  width: 220px;
+}
+
 /* Стили для section Каталог товаров */
 
 .catalog-list{
@@ -288,11 +310,20 @@ a {
   color: #000000;
 }
 
+.services .control {
+  width: 160px;
+}
+
 .services .control-effect:active {
+  width: 278px;
+
+  text-align: left; /*либо padding'ами*/
   color: #f7e184;
 
   background-color: #000000;
+  background-image: none;
 }
+
 
 /* Стили для секции Наши бренды */
 
@@ -335,6 +366,10 @@ a {
   color: #000000;
 }
 
+.about-us .control {
+  width: 260px;
+}
+
 /* Стили для секции Контакты */
 .contacts h2 {
   font-family: "Gilroy", "Tahoma", sans-serif;
@@ -347,6 +382,10 @@ a {
 
 .map-content { /* фон на случай, если карта не загр*/
   background-color: #cccccc;
+}
+
+.contacts .control {
+  width: 260px;
 }
 
 /* Стили для тега footer */
@@ -477,6 +516,7 @@ a {
 }
 
 .feedback button {
+
   background-color: inherit;
   border: none;
 }
