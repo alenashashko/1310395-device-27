@@ -60,7 +60,7 @@ a {
   margin: -1px;
   border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -165,6 +165,8 @@ a {
 .header-button { /*при фокусе в поле ввода
   найти не появляется - не знаю где ошибка*/
   display: none;
+
+  border: none;
 }
 
 .search-input:focus .header-button {
@@ -182,7 +184,6 @@ a {
   color: #ffffff;
 
   background-color: #000000;
-  border: 2px solid #000000;
 }
 
 .header-button:active {
@@ -190,7 +191,6 @@ a {
   color: #ffffff;
 
   background-color: #000000;
-  border: 2px solid #000000;
   opacity: 0.3;
 }
 
@@ -391,6 +391,11 @@ a {
   text-align: center;
 }
 
+.footer-logo,
+.copyright {
+  color: #ffffff;
+}
+
 .footer-logo:hover {
   opacity: 0.6;
 }
@@ -471,11 +476,16 @@ a {
   background-color: #f6dada;
 }
 
+.feedback button {
+  background-color: inherit;
+  border: none;
+}
+
 /* Далее стили для страницы каталога */
 
 /* Стили для тега header */
 
-.logout a {
+.header-logout a {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -513,7 +523,7 @@ a {
 
 /* Стили для секции Каталог моноподов для селфи */
 
-.monopods-catalog h3 {
+.item-catalog h3 {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   letter-spacing: 3.2px;
@@ -596,11 +606,11 @@ a {
 
 /* Список моноподов */
 
-.monopods-list {
+.item-catalog-list {
   list-style: none;
 }
 
-.monopods-list-title a {
+.item-catalog-title a {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   letter-spacing: 0.18px;
@@ -609,7 +619,7 @@ a {
   color: #000000;
 }
 
-.monopods-list p {
+.item-catalog-list p {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   letter-spacing: 0.16px;
@@ -618,27 +628,27 @@ a {
   text-align: right;
 }
 
-.monopods-compare {
+.item-catalog-compare {
   font-size: 13px;
   letter-spacing: 0.13px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.monopods-compare:hover,
-.monopods-compare:focus {
+.item-catalog-compare:hover,
+.item-catalog-compare:focus {
   color: rgba(0, 0, 0, 1);
 }
 
-.monopods-compare:focus {
+.item-catalog-compare:focus {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.monopods-options {
+.item-catalog-options {
   display: none;
 }
 
-.monopods-pic:hover .monopods-options { /*не работает*/
+.item-catalog-pic:hover .item-catalog-options { /*не работает*/
   display: inline;
 }
 
@@ -698,4 +708,8 @@ a {
   color: rgba(0, 0, 0, 1);
 }
 
+/* Стили для footer */
 
+.footer-logout a {
+  color:rgba(255, 255, 255, 0.3);
+}
