@@ -2,37 +2,44 @@
   font-family: "Gilroy";
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
   src:
-  /* local, font-display ?? */
-    url("../fonts/gilroyextrabold.woff") format("woff"),
-    url("../fonts/gilroyextrabold.woff2") format("woff2");
+    url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gilroy";
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
   src:
-    url("../fonts/gilroylight.woff") format("woff"),
-    url("../fonts/gilroylight.woff2") format("woff2");
+    url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src:
-    url("../fonts/opensans.woff") format("woff"),
-    url("../fonts/opensans.woff2") format("woff2");
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans";
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
   src:
-    url("../fonts/opensanslight.woff") format("woff"),
-    url("../fonts/opensanslight.woff2") format("woff2");
+    url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
@@ -53,6 +60,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* *, *::before, *::after {
+  box-sizing: inherit;
+}    пока не знаю, что значит это правило*/
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -64,7 +79,9 @@ a {
   overflow: hidden;
 }
 
-/* .control {
+/* это попытка сделать фон-полоску для кнопок,
+не работал z-index - сделала через градиент ниже в коде
+.control {
   position: relative;
   z-index: 1;
 
@@ -114,20 +131,20 @@ a {
 
 .control-effect:active {
   background-color: #f0c52e;
-  color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Стили для тега header */
 
 .header {
-  background-color: #f0c52e;
+  background-color: rgba(240, 197, 46, 0.5);
 }
 
 .search-input {
   line-height: 30px;
   color: rgba(0, 0, 0, 0.3);
 
-  background-color: #f0c52e;
+  background-color: inherit;
   border: none;
 }
 
@@ -172,7 +189,8 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-input:hover {  /*эффекты не раб для placeholder*/
+.search-input:hover {
+  /*эффекты не раб для placeholder*/
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -180,8 +198,9 @@ a {
   color: rgba(0, 0, 0, 1);
 }
 
-.header-button { /*при фокусе в поле ввода
-  найти не появляется - не знаю где ошибка*/
+.header-button {
+  /*при фокусе в поле ввода
+  найти не появляется - не знаю где ошибка - сделаем в конце*/
   display: none;
 
   border: none;
@@ -252,9 +271,10 @@ a {
   color: #000000;
 }
 
-.hits-list tr:first-of-type { /*не получается поменять местами ряды таблицы*/
-  order: 1;
-}
+  /*сделать: Чтобы переставить
+строки местами нужно на tbody добавить:
+display: flex;
+flex-direction: column-reverse*/
 
 .hits-list .control {
   width: 220px;
@@ -262,7 +282,7 @@ a {
 
 /* Стили для section Каталог товаров */
 
-.catalog-list{
+.catalog-list {
   list-style: none;
 }
 
@@ -288,13 +308,15 @@ a {
   background-color: rgba(240, 197, 46, 1);
 }
 
-.catalog-item-img:active img{
+.catalog-item-img:active img {
   opacity: 0.3;
 }
 
 /* Стили для section Наши сервисы */
 
-.services {background-color: #e5e5e5;}
+.services {
+  background-color: #e5e5e5;
+}
 
 .services-control-list,
 .services-list {
@@ -317,7 +339,8 @@ a {
 .services .control-effect:active {
   width: 278px;
 
-  text-align: left; /*либо padding'ами*/
+  text-align: left;
+  /*либо padding'ами*/
   color: #f7e184;
 
   background-color: #000000;
@@ -380,7 +403,8 @@ a {
   color: #000000;
 }
 
-.map-content { /* фон на случай, если карта не загр*/
+.map-content {
+  /* фон на случай, если карта не загр*/
   background-color: #cccccc;
 }
 
@@ -462,7 +486,7 @@ a {
 }
 
 .copyright:hover,
-.copyright:focus  {
+.copyright:focus {
   opacity: 0.6;
 }
 
@@ -472,7 +496,8 @@ a {
 
 /* Стили для модального окна Напишите нам */
 
-.write-us {
+.feedback { /*Скрывает модалку*/
+  display: none;
   background-color: rgba(4, 6, 6, 0.2);
 }
 
@@ -519,6 +544,10 @@ a {
 
   background-color: inherit;
   border: none;
+}
+
+.map { /*Скрывает модалку*/
+  display: none;
 }
 
 /* Далее стили для страницы каталога */
@@ -603,14 +632,14 @@ a {
   list-style: none;
 }
 
-.filter-input + label {
+.filter-input+label {
   font-size: 14px;
   letter-spacing: 0.14px;
   line-height: 40px;
   color: #000000;
 }
 
-.filter-input:disabled + label {
+.filter-input:disabled+label {
   color: #a6a6a6;
 }
 
@@ -688,7 +717,8 @@ a {
   display: none;
 }
 
-.item-catalog-pic:hover .item-catalog-options { /*не работает*/
+.item-catalog-pic:hover .item-catalog-options {
+  /*не работает*/
   display: inline;
 }
 
@@ -712,7 +742,7 @@ a {
 }
 
 .pagination-page {
-  color:rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-previous,
@@ -751,5 +781,5 @@ a {
 /* Стили для footer */
 
 .footer-logout a {
-  color:rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
