@@ -16,14 +16,13 @@
     </a>
     <div class="site-navigation">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="search_field">Поиск</label> <!--Будет скрыт-->
+        <label class="visually-hidden" for="search_field">Поиск</label>
         <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту">
         <button class="header-button" type="submit">Найти</button>
       </form>
       <ul class="user-navigation">
-        <li><a href="#">Иконка пользователя</a></li> <!--ВОПРОС: Читает "Иконка пользователя". Заменить на "Мой профиль" либо удалить
-          этот элемент?-->
-        <li><a href="#">Валентин Петухов</a></li>
+        <li><a href="#" aria-label="Мой профиль"></a></li>
+        <li><a href="#" aria-label="Имя пользователя">Валентин Петухов</a></li>
         <li class="header-logout"><a href="#">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
@@ -56,7 +55,7 @@
       <li class="breadcrumbs-current">Моноподы для селфи</li>
     </ul>
     <section class="item-catalog">
-      <h2 class="visually-hidden">Каталог моноподов для селфи</h2> <!--Будет скрыт-->
+      <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
       <div class="filter">
         <h3>Фильтр:</h3>
         <form action="https://echo.htmlacademy.ru" method="post">
@@ -122,7 +121,7 @@
           <li class="sorting-current"><a>По убыванию</a></li>
         </ul>
       </div>
-      <h3 class="visually-hidden">Список моноподов</h3> <!--Будет скрыт-->
+      <h3 class="visually-hidden">Список моноподов</h3>
       <ul class="item-catalog-list">
         <li>
           <h4 class="item-catalog-title">
@@ -173,15 +172,15 @@
         <ul>
           <li>
             <a>
-              <div class="pagination-previous">Назад</div>
+              <div class="pagination-previous" aria-label="Предыдущая страница">Назад</div>
             </a>
           </li>
-          <li><a class="pagination-page pagination-page-current">1</a></li>
-          <li><a class="pagination-page" href="#">2</a></li>
-          <li><a class="pagination-page" href="#">3</a></li>
+          <li><a class="pagination-page pagination-page-current" aria-label="Текущая страница">1</a></li>
+          <li><a class="pagination-page" href="#" aria-label="Вторая страница">2</a></li>
+          <li><a class="pagination-page" href="#" aria-label="Третья страница">3</a></li>
           <li>
             <a href="#">
-              <div class="pagination-next">Вперед</div>
+              <div class="pagination-next" aria-label="Следующая страница">Вперед</div>
             </a>
           </li>
         </ul>
@@ -195,9 +194,8 @@
     </a>
     <div>
       <ul class="footer-user-navigation">
-        <li><a href="#">Иконка пользователя</a></li> <!--ВОПРОС: Читает "Иконка пользователя". Заменить на "Мой профиль" либо удалить
-          этот элемент?-->
-        <li><a href="#">Валентин Петухов</a></li>
+        <li><a href="#" aria-label="Мой профиль"></a></li>
+        <li><a href="#" aria-label="Имя пользователя">Валентин Петухов</a></li>
         <li class="footer-logout"><a href="#">Выйти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
