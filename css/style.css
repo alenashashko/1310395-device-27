@@ -4,8 +4,8 @@
   font-style: normal;
   src:
   /* local, font-display ?? */
-    url('../fonts/gilroyextrabold.woff') format('woff'),
-    url('../fonts/gilroyextrabold.woff2') format('woff2');
+    url("../fonts/gilroyextrabold.woff") format("woff"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2");
 }
 
 @font-face {
@@ -13,8 +13,8 @@
   font-weight: 300;
   font-style: normal;
   src:
-    url('../fonts/gilroylight.woff') format('woff'),
-    url('../fonts/gilroylight.woff2') format('woff2');
+    url("../fonts/gilroylight.woff") format("woff"),
+    url("../fonts/gilroylight.woff2") format("woff2");
 }
 
 @font-face {
@@ -22,8 +22,8 @@
   font-weight: 400;
   font-style: normal;
   src:
-    url('../fonts/opensans.woff') format('woff'),
-    url('../fonts/opensans.woff2') format('woff2');
+    url("../fonts/opensans.woff") format("woff"),
+    url("../fonts/opensans.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,8 +31,8 @@
   font-weight: 300;
   font-style: normal;
   src:
-    url('../fonts/opensanslight.woff') format('woff'),
-    url('../fonts/opensanslight.woff2') format('woff2');
+    url("../fonts/opensanslight.woff") format("woff"),
+    url("../fonts/opensanslight.woff2") format("woff2");
 }
 
 body {
@@ -105,7 +105,8 @@ a {
   background-color: #f0c52e;
 }
 
-input[type="search"] {
+.search-input {
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.3);
 
   background-color: #f0c52e;
@@ -145,20 +146,20 @@ input[type="search"] {
 .user-navigation a:focus,
 .main-navigation a:hover,
 .main-navigation a:focus {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .user-navigation a:active,
 .main-navigation a:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-input[type="search"]:hover {
-  opacity: 0.6;
+.search-input:hover {  /*эффекты не раб для placeholder*/
+  color: rgba(0, 0, 0, 0.6);
 }
 
-input[type="search"]:focus {
-  opacity: 1;
+.search-input:focus {
+  color: rgba(0, 0, 0, 1);
 }
 
 .header-button { /*при фокусе в поле ввода
@@ -166,7 +167,7 @@ input[type="search"]:focus {
   display: none;
 }
 
-input[type="search"]:focus .header-button {
+.search-input:focus .header-button {
   display: inline;
 
   text-align: center;
@@ -362,7 +363,6 @@ input[type="search"]:focus .header-button {
 
 .footer-user-navigation a {
   color: rgba(255, 255, 255, 0.7);
-  line-height: 36px;
 }
 
 .footer-navigation a {
@@ -389,6 +389,41 @@ input[type="search"]:focus .header-button {
 
 .footer-social {
   text-align: center;
+}
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-user-navigation a:hover,
+.footer-user-navigation a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-user-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.copyright:hover,
+.copyright:focus  {
+  opacity: 0.6;
+}
+
+.copyright:active {
+  opacity: 0.3;
 }
 
 /* Стили для модального окна Напишите нам */
@@ -436,11 +471,231 @@ input[type="search"]:focus .header-button {
   background-color: #f6dada;
 }
 
+/* Далее стили для страницы каталога */
 
+/* Стили для тега header */
 
+.logout a {
+  color: rgba(0, 0, 0, 0.3);
+}
 
+/* Заголовок и хлебные крошки */
 
+.page-title {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 47px;
+  letter-spacing: 0.47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
 
+.breadcrumbs {
+  list-style: none;
+}
 
+.breadcrumbs a,
+.breadcrumbs-current {
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для секции Каталог моноподов для селфи */
+
+.monopods-catalog h3 {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+/* Фильтр */
+
+.filter h3 {
+  background-color: #d9d9d9;
+}
+
+.filter,
+.sorting {
+  background-color: #ebebeb;
+}
+
+.filter fieldset,
+.filter button {
+  border: none;
+}
+
+.filter legend {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter ul,
+.sorting ul {
+  list-style: none;
+}
+
+.filter-input + label {
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;
+}
+
+.filter button {
+  line-height: normal;
+
+  background-color: inherit;
+  border: none;
+}
+
+/* Сортировка */
+
+.sorting a {
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 18px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-current a {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sorting a:hover,
+.sorting a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+/* Список моноподов */
+
+.monopods-list {
+  list-style: none;
+}
+
+.monopods-list-title a {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.18px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.monopods-list p {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: right;
+}
+
+.monopods-compare {
+  font-size: 13px;
+  letter-spacing: 0.13px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.monopods-compare:hover,
+.monopods-compare:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.monopods-compare:focus {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.monopods-options {
+  display: none;
+}
+
+.monopods-pic:hover .monopods-options { /*не работает*/
+  display: inline;
+}
+
+/*Пагинация*/
+
+.pagination {
+  background-color: #ebebeb;
+}
+
+.pagination ul {
+  list-style: none;
+}
+
+.pagination a {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.pagination-page {
+  color:rgba(0, 0, 0, 0.3);
+}
+
+.pagination-previous,
+.pagination-next,
+.pagination-page-current {
+  color: #000000;
+}
+
+.pagination-next {
+  text-align: right;
+}
+
+/*не работает фон при фокусе на ВПЕРЕД*/
+.pagination-previous:hover,
+.pagination-next:hover,
+.pagination-next:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-previous:active,
+.pagination-next:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #d9d9d9;
+}
+
+.pagination-page:hover,
+.pagination-page:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-page:active {
+  color: rgba(0, 0, 0, 1);
+}
 
 
