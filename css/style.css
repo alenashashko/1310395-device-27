@@ -131,12 +131,14 @@ img {
 }
 
 .search-input {
+  background-color: inherit;
+  border: none;
+}
+
+.search-input::placeholder {
   font: inherit;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.3);
-
-  background-color: inherit;
-  border: none;
 }
 
 .user-navigation,
@@ -481,7 +483,6 @@ flex-direction: column-reverse*/
 
 .feedback { /*Скрывает модалку*/
   display: none;
-  background-color: rgba(4, 6, 6, 0.2);
 }
 
 .feedback-field-title {
@@ -493,14 +494,16 @@ flex-direction: column-reverse*/
   color: #000000;
 }
 
-.feedback-field {
+.feedback-field::placeholder {
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
   letter-spacing: normal;
   line-height: 18px;
   font-weight: normal;
   color: rgba(70, 70, 70, 0.4);
+}
 
+.feedback-field {
   background-color: #f2f2f2;
 }
 
