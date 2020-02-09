@@ -114,12 +114,12 @@ img {
   height: 100%;
 }
 
-.control-effect:hover,
-.control-effect:focus {
+.control:hover,
+.control:focus {
   background-color: #f0c52e;
 }
 
-.control-effect:active {
+.control:active {
   background-color: #f0c52e;
   color: rgba(0, 0, 0, 0.3);
 }
@@ -332,7 +332,7 @@ flex-direction: column-reverse*/
   width: 160px;
 }
 
-.services .control-effect:active {
+.services .control:active {
   width: 278px;
 
   text-align: left;
@@ -349,18 +349,6 @@ flex-direction: column-reverse*/
 .brands-list {
   list-style: none;
 }
-
-/* не работает
-
-.brands-logo-color {
-  display: none;
-}
-
-.brands-logo:hover .brands-logo-color,
-.brands-logo:focus .brands-logo-color{
-  display: block;
-}
-*/
 
 /* Стили для секции О нас */
 
