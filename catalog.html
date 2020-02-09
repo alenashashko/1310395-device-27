@@ -30,10 +30,11 @@
     </div>
     <nav class="main-navigation">
       <ul>
-        <li class="header-catalog"><a href="#">Каталог товаров</a>
+        <li class="header-catalog">
+          <a href="#">Каталог товаров</a>
           <ul class="header-catalog-list">
             <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
-            <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+            <li class="header-catalog-item"><a>Моноподы для селфи</a></li>
             <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
             <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
             <li class="header-catalog-item"><a href="#">Умные часы</a></li>
@@ -58,16 +59,16 @@
       <h2 class="visually-hidden">Каталог моноподов для селфи</h2>
       <div class="filter">
         <h3>Фильтр:</h3>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Стоимость</legend>
             <div>
               <button type="button"></button>
               <button type="button"></button>
             </div>
-            <label for="minvalue">от</label>
+            <label class="from" for="minvalue">от</label>
             <input type="text" name="min" id="minvalue" value="0">
-            <label for="maxvalue">до</label>
+            <label class="to" for="maxvalue">до</label>
             <input type="text" name="max" id="maxvalue" value="5000">
           </fieldset>
           <fieldset>
@@ -179,7 +180,7 @@
           <li><a class="pagination-page" href="#" aria-label="Вторая страница">2</a></li>
           <li><a class="pagination-page" href="#" aria-label="Третья страница">3</a></li>
           <li>
-            <a href="#">
+            <a class="pagination-next-link" href="#">
               <div class="pagination-next" aria-label="Следующая страница">Вперед</div>
             </a>
           </li>

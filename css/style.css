@@ -79,49 +79,39 @@ img {
   overflow: hidden;
 }
 
-/* это попытка сделать фон-полоску для кнопок,
-не работал z-index - сделала через градиент ниже в коде
 .control {
   position: relative;
-  z-index: 1;
+
+  display: block;
+  height: 40px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   letter-spacing: 3.6px;
-  line-height: 24px;
+  line-height: 40px;
   font-weight: 800;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
 }
 
-.control::after { не работает z-index
+.control::after {
   content: "";
   position: absolute;
   left: 0px;
-  top: 8px;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+  transition: height 0.3s;
 
-  width: 220px;
+  width: 100%;
   height: 8px;
 
   background-color: #f0c52e;
-} */
+}
 
-.control {
-  display: block;
-  width: 200px;
-  height: 40px;
-
-  font-family: "Gilroy", "Tahoma", sans-serif;
-  font-size: 18px;
-  letter-spacing: 3.6px;
-  line-height: 24px;
-  font-weight: 800;
-  text-align: center;
-  color: #000000;
-  text-transform: uppercase;
-
-  background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 60%)
+.control:hover::after {
+  height: 100%;
 }
 
 .control-effect:hover,
@@ -141,6 +131,7 @@ img {
 }
 
 .search-input {
+  font: inherit;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.3);
 
@@ -189,46 +180,51 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search-input:hover {
-  /*эффекты не раб для placeholder*/
+.header-catalog-list {
+  display: none;
+}
+
+/*уровень вложенности строки 206*/
+.header-catalog:hover .header-catalog-list,
+.header-catalog a:focus + .header-catalog-list {
+  display: block;
+}
+
+.search-input:hover::placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search-input:focus {
+.search-input:focus::placeholder {
   color: rgba(0, 0, 0, 1);
 }
 
 .header-button {
-  /*при фокусе в поле ввода
-  найти не появляется - не знаю где ошибка - сделаем в конце*/
+  /*сделаем позже*/
   display: none;
+  width: 85px;
+  height: 49px;
 
-  border: none;
-}
-
-.search-input:focus .header-button {
-  display: inline;
-
-  text-align: center;
+  font: inherit;
   color: #000000;
 
-  background-color: #f0c52e;
+  background-color: inherit;
   border: 2px solid #000000;
 }
 
+.search-input:focus + .header-button {
+  display: inline;
+}
+
 .header-button:hover {
-  text-align: center;
   color: #ffffff;
 
   background-color: #000000;
 }
 
 .header-button:active {
-  text-align: center;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.3);
 
   background-color: #000000;
-  opacity: 0.3;
 }
 
 .header-logo:hover {
@@ -404,7 +400,6 @@ flex-direction: column-reverse*/
 }
 
 .map-content {
-  /* фон на случай, если карта не загр*/
   background-color: #cccccc;
 }
 
@@ -632,14 +627,23 @@ flex-direction: column-reverse*/
   list-style: none;
 }
 
-.filter-input+label {
+.filter input[type="text"] {
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-input + label {
   font-size: 14px;
   letter-spacing: 0.14px;
   line-height: 40px;
   color: #000000;
 }
 
-.filter-input:disabled+label {
+.filter-input:disabled + label {
   color: #a6a6a6;
 }
 
@@ -751,14 +755,10 @@ flex-direction: column-reverse*/
   color: #000000;
 }
 
-.pagination-next {
-  text-align: right;
-}
-
-/*не работает фон при фокусе на ВПЕРЕД*/
+/*дивы пока оставила, так как нужны для смены фона при наведении*/
 .pagination-previous:hover,
 .pagination-next:hover,
-.pagination-next:focus {
+.pagination-next-link:focus .pagination-next {
   background-color: #d9d9d9;
 }
 
