@@ -23,26 +23,24 @@
         </form>
         <ul class="header-user-navigation">
           <li class="header-login"><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li class="header-compare"><a href="#">Сравнить</a></li>
+          <li class="header-basket"><a href="#">Корзина</a></li>
         </ul>
       </div>
-      <nav>
-        <ul class="main-navigation">
-          <li class="header-catalog">
-            <a href="#">Каталог товаров</a>
-            <ul class="header-catalog-list">
-              <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
-              <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-              <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
-              <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-              <li class="header-catalog-item"><a href="#">Умные часы</a></li>
-              <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+      <nav class="main-navigation">
+        <a class="header-catalog-link" href="#">Каталог товаров</a>
+        <ul class="header-catalog-list">
+          <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
+          <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+          <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
+          <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+          <li class="header-catalog-item"><a href="#">Умные часы</a></li>
+          <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+        </ul>
+        <ul class="header-info">
+          <li class="header-delivery"><a href="#">Доставка</a></li>
+          <li class="header-warranty"><a href="#">Гарантия</a></li>
+          <li class="header-contacts"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -81,20 +79,22 @@
             </p>
             <a class="control" href="#">Подробнее</a>
             <table>
-              <tr>
-                <th>Длина палки</th>
-                <th>Вес палки</th>
-                <th>Материал</th>
-              </tr>
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <th>Длина палки</th>
+                  <th>Вес палки</th>
+                  <th>Материал</th>
+                </tr>
+                <tr>
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </li>
-        <li class="hits-item">
+        <!-- <li class="hits-item">
           <img class="hits-item-pic" src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
           <div class="hits-item-info">
             <p class="hits-item-slogan">
@@ -140,7 +140,7 @@
               </tr>
             </table>
           </div>
-        </li>
+        </li> -->
       </ul>
     </section>
     <section class="catalog container">
@@ -199,20 +199,22 @@
     <section class="services">
       <div class="container">
         <h2 class="visually-hidden">Наши сервисы</h2>
-        <ul class="services-control-list">
-          <li>
-            <label class="control" for="delivery_field">Доставка</label>
-            <input type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
-          </li>
-          <li>
-            <label class="control" for="guarantee_field">Гарантия</label>
-            <input type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
-          </li>
-          <li>
-            <label class="control" for="credit_field">Кредит</label>
-            <input type="radio" name="slider2-group" value="credit" id="credit_field">
-          </li>
-        </ul>
+        <div class="services-wrapper">
+          <ul class="services-control-list">
+            <li>
+              <label class="control" for="delivery_field">Доставка</label>
+              <input type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
+            </li>
+            <li>
+              <label class="control" for="guarantee_field">Гарантия</label>
+              <input type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
+            </li>
+            <li>
+              <label class="control" for="credit_field">Кредит</label>
+              <input type="radio" name="slider2-group" value="credit" id="credit_field">
+            </li>
+          </ul>
+        </div>
         <ul class="services-list">
           <li class="services-item">
             <h3>Доставка</h3>
@@ -222,7 +224,7 @@
               заработаем, поднимая его на ваш этаж.
             </p>
           </li>
-          <li class="services-item">
+          <!-- <li class="services-item">
             <h3>Гарантия</h3>
             <p>
               Если из-за возгорания купленного у нас товара у вас сгорит
@@ -237,7 +239,7 @@
               консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.
             </p>
-          </li>
+          </li> -->
         </ul>
       </div>
     </section>

@@ -119,10 +119,6 @@ img {
 
 /* Стили для тега header */
 
-.header {
-  background-color: #ffffff;
-}
-
 .search-input {
   background-color: inherit;
   border: none;
@@ -135,7 +131,8 @@ img {
 }
 
 .header-user-navigation,
-.main-navigation li {
+.header-catalog-list,
+.header-info {
   list-style: none;
 }
 
@@ -180,8 +177,8 @@ img {
 }
 
 /*уровень вложенности строки 206*/
-.header-catalog:hover .header-catalog-list,
-.header-catalog a:focus+.header-catalog-list {
+.header-catalog-link:hover+.header-catalog-list,
+.header-catalog-link:focus+.header-catalog-list {
   display: block;
 }
 
@@ -305,17 +302,15 @@ img {
 
 /* Стили для section Наши сервисы */
 
-.services {
-  background-color: #e5e5e5;
-  /*будет градиент*/
-}
-
 .services-control-list,
 .services-list {
   list-style: none;
 }
 
 .services-item h3 {
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   letter-spacing: 0.47px;
@@ -329,7 +324,7 @@ img {
 }
 
 .services .control:active {
-  width: 278px;
+  width: 280px;
 
   text-align: left;
   /*либо padding'ами*/
@@ -764,9 +759,9 @@ img {
 
 /*СЕТОЧНЫЕ СТИЛИ - ОБЪЕДИНИТЬ*/
 
-/* html, body {
-  width: 1440px;
-} */
+body {
+  min-width: 1200px;
+}
 
 .container {
   width: 1200px;
@@ -777,17 +772,20 @@ img {
 /*сетка header*/
 
 .header.container {
-  background-image: linear-gradient(to bottom, transparent 40px, rgba(240, 197, 46, 0.5) 40px);
+  position: relative;
+
+  background-image: linear-gradient(to bottom, transparent 40px, #f7e296 40px);
+  background-clip: content-box;
 }
 
 .header-user-navigation,
-.main-navigation,
-.header-catalog-list {
+.header-catalog-list,
+.header-info {
   margin: 0;
   padding: 0;
 }
 
-.header-wrapper {
+.header-wrapper {  /*оставила обертку, т.к при paddin'ах фон тоже ужимается под контент*/
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
@@ -802,61 +800,62 @@ img {
 
 .site-navigation {
   display: flex;
+  justify-content: space-between;
 }
 
 .header-user-navigation {
   display: flex;
   width: 500px;
+}
+
+.header-compare {
   margin-left: auto;
 }
 
-.header-user-navigation li {
-  width: 100px;
+.header-basket {
+  margin-left: 35px;
 }
 
-.header-user-navigation .header-login {
-  width: 80px;
-  /*перераспределяем*/
-  margin-right: 200px;
-}
-
-.header-user-navigation .header-username {
-  width: 160px;
-  /*перераспределяем*/
+.header-username {
   margin-right: 20px;
-}
-
-.header-user-navigation .header-logout {
-  width: 80px;
-  /*перераспределяем*/
-  margin-right: 20px;
-}
-
-.header-user-navigation li:last-child {
-  margin-left: 20px;
 }
 
 .main-navigation {
   display: flex;
-  align-items: baseline;
+  justify-content: space-between;
 }
 
-.main-navigation>li {
-  width: 120px;
+.header-info {
+  display: flex;
+  width: 500px;
 }
 
-.main-navigation>.header-catalog {
-  width: 240px;
-  /*перераспределяем*/
-  margin-right: 300px;
+.header-delivery {
+  margin-right: 40px;
 }
 
-.main-navigation>li:last-child {
+.header-warranty {
+  margin-right: 100px;
+}
+
+.header-contacts {
   margin-left: auto;
 }
 
-.main-navigation>li:nth-child(3) {
-  margin-left: 40px;
+/*ТУТ ПРОБЛЕМА ОСТАЛАСЬ - неровные значения + не получится задать паддинг
+   в дальнейшем для элементов списка, так как паддинг уже задан для фона, т.е
+   нужно будет и подменю добавить класс header-wrapper*/
+.header-catalog-list {
+  position: absolute;
+  top: 99%; /*только так совпал с хедером*/
+  left: 0;
+
+  width: 100%;
+  padding-left: 21px; /*только так совпал с хедером*/
+  padding-right: 20px;
+
+  background-color: #f7e296;
+  background-clip: content-box;
 }
 
 /*сетка слайдер*/
@@ -907,8 +906,7 @@ img {
   margin-right: 60px;
 }
 
-.hits-item-info table {
-  /*не срабатывает*/
+.hits-item-info tbody {
   display: flex;
   flex-direction: column-reverse;
 }
@@ -916,7 +914,11 @@ img {
 /*сетка каталог*/
 
 .catalog {
-  margin-top: 120px;
+  margin-top: 110px;
+}
+
+.catalog-item {
+  width: 160px;
 }
 
 .catalog-list {
@@ -931,7 +933,7 @@ img {
   flex-direction: column-reverse;
 }
 
-/*сетка сервисы - сделать градиент*/
+/*сетка сервисы*/
 
 .services-control-list,
 .services-list {
@@ -942,16 +944,27 @@ img {
 .services .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 167px;
-  padding-right: 60px;
+}
+
+.services {
+  margin-top: 84px;
+
+  background-image: linear-gradient(to bottom, transparent 107px, #e5e5e5 107px)
 }
 
 .services-control-list {
-  width: 278px;
+  width: 280px;
+  margin-top: 80px;
+}
+
+.services-wrapper {   /*обертка ради правого бордера*/
+  border-right: 7px solid #000000;
 }
 
 .services-list {
-  width: 760px;
+  width: 880px;
+  margin-top: 80px;
+  padding-left: 116px;
 }
 
 /*сетка наши бренды*/
