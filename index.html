@@ -10,44 +10,42 @@
 
 <body>
 
-  <header class="header">
-    <div class="container">
-      <div class="header-wrapper">
-        <a class="header-logo">
-          <img src="img/header-logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
-        </a>
-        <div class="site-navigation">
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="search_field">Поиск</label>
-            <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту">
-            <button class="header-button" type="submit">Найти</button>
-          </form>
-          <ul class="header-user-navigation">
-            <li class="header-login"><a href="#">Войти</a></li>
-            <li><a href="#">Сравнить</a></li>
-            <li><a href="#">Корзина</a></li>
-          </ul>
-        </div>
-        <nav>
-          <ul class="main-navigation">
-            <li class="header-catalog">
-              <a href="#">Каталог товаров</a>
-              <ul class="header-catalog-list">
-                <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-                <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
-                <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-                <li class="header-catalog-item"><a href="#">Умные часы</a></li>
-                <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
+  <header class="header container">
+    <div class="header-wrapper">
+      <a class="header-logo">
+        <img src="img/header-logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
+      </a>
+      <div class="site-navigation">
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="search_field">Поиск</label>
+          <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+          <button class="header-button" type="submit">Найти</button>
+        </form>
+        <ul class="header-user-navigation">
+          <li class="header-login"><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
       </div>
-    <div>
+      <nav>
+        <ul class="main-navigation">
+          <li class="header-catalog">
+            <a href="#">Каталог товаров</a>
+            <ul class="header-catalog-list">
+              <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
+              <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+              <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
+              <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+              <li class="header-catalog-item"><a href="#">Умные часы</a></li>
+              <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
@@ -70,7 +68,8 @@
       </ul>
       <ul class="hits-list">
         <li class="hits-item">
-          <img class="hits-item-pic" src="img/slider-1.png" width="384" height="486" alt="Палка для селфи длиной 8 метров и весом 5 килограмм">
+          <img class="hits-item-pic" src="img/slider-1.png" width="384" height="486"
+            alt="Палка для селфи длиной 8 метров и весом 5 килограмм">
           <div class="hits-item-info">
             <p class="hits-item-slogan">
               Делай селфи,<br>
@@ -118,7 +117,8 @@
           </div>
         </li>
         <li class="hits-item">
-          <img class="hits-item-pic" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером">
+          <img class="hits-item-pic" src="img/slider-3.png" width="526" height="334"
+            alt="Квадрокоптер с мощным лазером">
           <div class="hits-item-info">
             <p class="hits-item-slogan">
               Порхает как бабочка,
@@ -330,7 +330,8 @@
           <li><a href="#" aria-label="Инстаграм"></a></li>
           <li><a href="#" aria-label="Твиттер"></a></li>
         </ul>
-        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Профессиональный онлайн курс HTML и CSS, уровень 1" target="_blank">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss"
+          aria-label="Профессиональный онлайн курс HTML и CSS, уровень 1" target="_blank">
           <img src="img/logo-html.svg" width="27" height="35" alt="Логотип «HTML Academy»">
         </a>
       </div>
@@ -343,10 +344,11 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <label class="feedback-field-title" for="name_field">Ваше имя:</label>
         <input class="feedback-field" type="text" name="name" id="name_field" placeholder="Имя Фамилия">
-        <label  class="feedback-field-title" for="e-mail_field">Ваш e-mail:</label>
+        <label class="feedback-field-title" for="e-mail_field">Ваш e-mail:</label>
         <input class="feedback-field" type="email" name="e-mail" id="e-mail_field" placeholder="email@example.com">
-        <label  class="feedback-field-title" for="letter_field">Текст письма:</label>
-        <textarea class="feedback-field" name="letter" id="letter_field" rows="8" placeholder="В свободной форме"></textarea>
+        <label class="feedback-field-title" for="letter_field">Текст письма:</label>
+        <textarea class="feedback-field" name="letter" id="letter_field" rows="8"
+          placeholder="В свободной форме"></textarea>
         <button class="control" type="submit">Отправить</button>
         <button type="reset">Закрыть</button>
       </form>
