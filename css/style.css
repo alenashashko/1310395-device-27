@@ -417,7 +417,7 @@ img {
   color: #ffffff;
 }
 
-.footer-contact {
+.footer-tel_number {
   letter-spacing: normal;
   text-align: right;
   color: #ffffff;
@@ -786,7 +786,10 @@ body {
   padding: 0;
 }
 
-.header-wrapper {  /*оставила обертку, т.к при paddin'ах фон тоже ужимается под контент*/
+/*оставила обертку header-wrapper, т.к при paddin'ах
+фон либо занимает весь паддинг либо ужимается под контент*/
+
+.header-wrapper {
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
@@ -806,7 +809,8 @@ body {
 
 .header-user-navigation {
   display: flex;
-  width: 500px; /*или лучше min-width?*/
+  width: 500px;
+  /*или лучше min-width?*/
 }
 
 .header-compare {
@@ -828,7 +832,8 @@ body {
 
 .header-info {
   display: flex;
-  width: 500px; /*или лучше min-width?*/
+  width: 500px;
+  /*или лучше min-width?*/
 }
 
 .header-delivery {
@@ -848,11 +853,13 @@ body {
    нужно будет и подменю добавить класс header-wrapper*/
 .header-catalog-list {
   position: absolute;
-  top: 99%; /*только так совпал с хедером*/
+  top: 99%;
+  /*только так совпал с хедером*/
   left: 0;
 
   width: 100%;
-  padding-left: 21px; /*только так совпал с хедером*/
+  padding-left: 21px;
+  /*только так совпал с хедером*/
   padding-right: 20px;
 
   background-color: #f7e296;
@@ -969,7 +976,7 @@ body {
 /*сетка наши бренды*/
 .brands {
   margin-top: 94px;
-  margin-bottom: 93px; /*до "линий" */
+  margin-bottom: 93px;
 }
 
 .brands-list {
@@ -1053,11 +1060,16 @@ body {
 
 .footer-user-navigation {
   display: flex;
-  width: 480px; /*или лучше min-width?*/
+  width: 480px;
+  /*или лучше min-width?*/
 }
 
 .footer-login {
   padding-left: 135px;
+}
+
+.footer-username {
+  margin-right: 20px;
 }
 
 .footer-compare {
@@ -1072,14 +1084,15 @@ body {
   display: flex;
 }
 
-.footer-contact {
+.footer-tel_number {
   margin-left: auto;
 }
 
 .footer-navigation {
   display: flex;
   justify-content: space-between;
-  width: 440px; /*или лучше min-width?*/
+  width: 440px;
+  /*или лучше min-width?*/
   margin-left: 160px;
 }
 
@@ -1089,6 +1102,10 @@ body {
 
 .copyright {
   margin-left: auto;
+}
+
+.inner-page .footer {
+  margin-top: 0;
 }
 
 /*сетки для модальных окон*/
@@ -1225,7 +1242,7 @@ body {
 .item-catalog-title {
   margin: 0;
   padding: 0;
-  width: 260px; /*можно таким способом добиваться переноса слов?*/
+  width: 260px; /*можно таким способом добиваться переноса слов в заголовке?*/
 }
 
 .item-catalog-info p {
@@ -1258,8 +1275,4 @@ body {
 .pagination-previous,
 .pagination-next {
   padding: 0 30px;
-}
-
-.inner-page .footer {
-  margin-top: 0;
 }
