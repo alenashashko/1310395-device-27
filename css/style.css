@@ -703,7 +703,7 @@ img {
 
 /*Пагинация*/
 
-.pagination-list {
+.pagination {
   background-color: #ebebeb;
 }
 
@@ -711,11 +711,10 @@ img {
   list-style: none;
 }
 
-.pagination-list a {
+.pagination a {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 16px;
   letter-spacing: 3.2px;
-  line-height: 24px;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -1174,20 +1173,13 @@ body {
 
 .item-catalog-list {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 70px;
+  margin-top: 69px;
 }
 
 .item-catalog-list li:nth-child(2n) {
   margin-right: 0;
-}
-
-.pagination-list {
-  margin-bottom: 77px;
-}
-
-.inner-page .footer {
-  margin-top: 0;
 }
 
 .sorting {
@@ -1199,4 +1191,75 @@ body {
   display: flex;
 
   line-height: 70px;
+}
+
+.sorting-list li:first-child {
+  margin-right: 20px;
+}
+
+.sorting-list li:nth-child(2) {
+  margin-right: 30px;
+}
+
+.sorting-list li:nth-child(3) {
+  margin-right: 210px;
+}
+
+.sorting-list li:nth-child(4) {
+  margin-left: auto;
+}
+
+.item-catalog-list li {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 49px;
+}
+
+.item-catalog-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 38px;
+}
+
+.item-catalog-title {
+  margin: 0;
+  padding: 0;
+  width: 260px; /*можно таким способом добиваться переноса слов?*/
+}
+
+.item-catalog-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.item-catalog-list li:first-child,
+.item-catalog-list li:nth-child(2) {
+  margin-top: 0;
+}
+
+.pagination {
+  line-height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41px;
+  margin-bottom: 77px;
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-list li {
+  margin-right: 30px
+}
+
+.pagination-previous,
+.pagination-next {
+  padding: 0 30px;
+}
+
+.inner-page .footer {
+  margin-top: 0;
 }
