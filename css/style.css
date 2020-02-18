@@ -64,6 +64,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -78,7 +79,7 @@ img {
 }
 
 .control {
-  position: relative;
+  position:relative;
 
   display: block;
   height: 40px;
@@ -98,7 +99,7 @@ img {
   position: absolute;
   left: 0px;
   top: 50%;
-  z-index: -1;
+  z-index: -2;
   transform: translateY(-50%);
   transition: height 0.3s;
 
@@ -118,17 +119,6 @@ img {
 }
 
 /* Стили для тега header */
-
-.search-input {
-  background-color: inherit;
-  border: none;
-}
-
-.search-input::placeholder {
-  font: inherit;
-  line-height: 30px;
-  color: rgba(0, 0, 0, 0.3);
-}
 
 .header-user-navigation,
 .header-catalog-list,
@@ -162,13 +152,25 @@ img {
 
 .header-user-navigation a:hover,
 .header-user-navigation a:focus,
-.main-navigation a:hover,
-.main-navigation a:focus {
-  color: rgba(0, 0, 0, 0.6);
+.header-catalog-list a:hover,
+.header-catalog-list a:focus,
+.header-info a:hover,
+.header-info a:focus {
+  opacity: 0.6;
 }
 
 .header-user-navigation a:active,
-.main-navigation a:active {
+.header-catalog-list a:active,
+.header-info a:active {
+  opacity: 0.3;
+}
+
+.header-catalog-link:hover,
+.header-catalog-link:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-catalog-link:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -176,10 +178,42 @@ img {
   display: none;
 }
 
-/*уровень вложенности строки 206*/
-.header-catalog-link:hover+.header-catalog-list,
-.header-catalog-link:focus+.header-catalog-list {
+/*уровень вложенности?*/
+.header-catalog-link:hover~.header-catalog-list,
+.header-catalog-link:focus~.header-catalog-list {
   display: block;
+}
+
+/*кнопка найти не работает*/
+
+.search-input {
+  width: 356px;
+  padding: 0;
+  padding-bottom: 14px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.header-button {
+  display: none;
+  padding: 0;
+  padding-right: 19px;
+  padding-left: 20px;
+  margin: 0;
+  margin-top: 5px;
+
+  font: inherit;
+  color: #000000;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.search-input::placeholder {
+  font: inherit;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-input:hover::placeholder {
@@ -190,24 +224,18 @@ img {
   color: rgba(0, 0, 0, 1);
 }
 
-.header-button {
-  /*сделаем позже*/
-  display: none;
-  width: 85px;
-  height: 49px;
-
-  font: inherit;
-  color: #000000;
-
-  background-color: inherit;
-  border: 2px solid #000000;
+.search-input:focus {  /*прыгает*/
+  border-color: #000000;
 }
 
-.search-input:focus+.header-button {
-  display: inline;
+.search-input:focus~.header-button {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 45px;
 }
 
-.header-button:hover {
+.header-button:hover,
+.header-button:focus {
   color: #ffffff;
 
   background-color: #000000;
@@ -219,11 +247,11 @@ img {
   background-color: #000000;
 }
 
-.header-logo:hover {
+.inner-page .header-logo:hover {
   opacity: 0.6;
 }
 
-.header-logo:active {
+.inner-page .header-logo:active {
   opacity: 0.3;
 }
 
@@ -281,6 +309,7 @@ img {
 .catalog-item-img {
   width: 160px;
   height: 160px;
+
   line-height: 160px;
   text-align: center;
 
@@ -289,6 +318,10 @@ img {
 
 .catalog-item-img img {
   vertical-align: middle;
+}
+
+.catalog-item:nth-child(2) img {
+  vertical-align: bottom;
 }
 
 .catalog-item-img:hover,
@@ -784,18 +817,20 @@ body {
   padding: 0;
 }
 
-/*оставила обертку header-wrapper, т.к при paddin'ах
-фон либо занимает весь паддинг либо ужимается под контент*/
-
 .header-wrapper {
   width: 1040px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 23px;
 }
 
 .header-logo {
   display: block;
+  width: 163px;
+
+  padding-top: 23px;
+}
+
+.header-logo img {
   width: 163px;
   height: 35px;
 }
@@ -816,7 +851,7 @@ body {
 }
 
 .header-basket {
-  margin-left: 35px;
+  margin-left: 41px;
 }
 
 .header-username {
@@ -835,11 +870,7 @@ body {
 }
 
 .header-delivery {
-  margin-right: 40px;
-}
-
-.header-warranty {
-  margin-right: 100px;
+  margin-right: 34px;
 }
 
 .header-contacts {
@@ -851,8 +882,7 @@ body {
    нужно будет и подменю добавить класс header-wrapper*/
 .header-catalog-list {
   position: absolute;
-  top: 99%;
-  /*только так совпал с хедером*/
+  top: 100%;
   left: 0;
 
   width: 100%;
@@ -883,7 +913,7 @@ body {
 }
 
 .hits-item:first-child .hits-item-info {
-  width: 480px;
+  width: 481px;
   margin-left: 125px;
   margin-right: 80px;
 }
@@ -912,15 +942,10 @@ body {
   margin-right: 60px;
 }
 
-.hits-item-info tbody {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
 /*сетка каталог*/
 
 .catalog {
-  margin-top: 110px;
+  margin-top: 109px;
 }
 
 .catalog-item {
@@ -957,42 +982,43 @@ body {
 }
 
 .services {
-  margin-top: 84px;
+  padding-bottom: 70px;
+  margin-top: 80px;
 
-  background-image: linear-gradient(to bottom, transparent 107px, #e5e5e5 107px)
+  background-image: linear-gradient(to bottom, transparent 100px, #e5e5e5 100px);
 }
 
 .services-control-list {
-  width: 280px;
+  width: 286px;
   padding-top: 80px;
+  padding-bottom: 43px;
 
   border-right: 7px solid #000000;
 }
 
 .services-list {
   width: 880px;
-  padding-top: 80px;
+  padding-top: 73px;
   padding-left: 116px;
 }
 
 /*сетка наши бренды*/
 .brands {
   margin-top: 94px;
-  margin-bottom: 93px;
+  margin-bottom: 92px;
 }
 
 .brands-list {
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 .brands-item {
   position: relative;
   width: 260px;
   height: 100px;
-  margin-right: 40px;
-  outline: 1px solid black;
 }
 
 .brands-list li:nth-child(4) {
@@ -1276,3 +1302,267 @@ body {
 .pagination-next {
   padding: 0 30px;
 }
+
+/*МИКРОСЕТКИ*/
+
+/*header микросетка*/
+
+.header-user-navigation a { /*большие интерактивные области*/
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 25px;
+}
+
+.header-catalog-link,
+.header-info a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 49px;
+}
+
+.site-navigation form {
+  position: relative;
+  padding-left: 37px;
+  padding-top: 16px;
+}
+
+.site-navigation form::before {
+  content: "";
+
+  position: absolute;
+  top: 24px;
+  left: 2px;
+
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-login a {
+  position: relative;
+
+  padding-left: 26px;
+}
+
+.header-login a::before {
+  content: "";
+
+  position: absolute;
+  top: 25px;
+  left: 0;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-compare a {
+  position: relative;
+
+  padding-left: 19px;
+}
+
+.header-compare a::before {
+  content: "";
+
+  position: absolute;
+  top: 28px;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-basket a {
+  position: relative;
+
+  padding-left: 22px;
+}
+
+.header-basket a::before {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 0;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-username a {
+  position: relative;
+
+  padding-left: 27px;
+}
+
+.header-username a::before {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 0;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header-catalog-link {
+  position: relative;
+
+  padding-right: 30px;
+}
+
+.header-catalog-link::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 230px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+/*слайдер микросетка*/
+
+.hits-control-list input[type="radio"] {
+  display: none;
+}
+
+.hits.container {
+  background-image: linear-gradient(to bottom, #f7e296 114px, transparent 114px);
+  background-clip: content-box;
+}
+
+.hits-item-info p {
+  margin: 0;
+}
+
+.hits-item-info .hits-item-slogan {
+  margin-top: 82px;
+}
+
+.hits-item-info p:nth-child(2) {
+  margin-top: 19px;
+}
+
+.hits-item-info .control {
+  margin-top: 44px;
+}
+
+.hits-item-table tbody {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.hits-item-table {
+  width: 428px;
+  margin-top: 48px;
+
+  border-collapse: collapse;
+
+  outline: 1px solid black;  /*УБРАТЬ*/
+}
+
+.hits-item-table th,
+.hits-item-table td {
+  text-align: left;
+
+  outline: 1px solid black; /*УБРАТЬ*/
+}
+
+.catalog-item h3 {
+  margin-top: 34px;
+}
+
+.services-control-list input[type="radio"] {
+  display: none;
+}
+
+.services-item p {
+  margin: 0;
+  margin-top: 31px;
+}
+
+.services-control-list .control {
+  margin-bottom: 25px;
+}
+
+.services-item {
+  padding-right: 335px;
+}
+
+.services-item.delivery {
+  position: relative;
+}
+
+.services-item.delivery::after {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  right: 66px;
+
+  width: 136px;
+  height: 164px;
+
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.about-us {
+  position: relative;
+}
+
+.about-us::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 8px;
+
+  background-color: #000000;
+}
+
+.about-us h2,
+.about-us p {
+  margin: 0;
+}
+
+
+
+
+
+
+
