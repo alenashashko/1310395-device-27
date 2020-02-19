@@ -86,7 +86,7 @@ input[type="radio"].visually-hidden {
 }
 
 .control {
-  position:relative;
+  position: relative;
 
   display: block;
   height: 40px;
@@ -254,11 +254,11 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
 }
 
-.inner-page .header-logo:hover {
+.header-logo:hover {
   opacity: 0.6;
 }
 
-.inner-page .header-logo:active {
+.header-logo:active {
   opacity: 0.3;
 }
 
@@ -364,8 +364,8 @@ input[type="radio"].visually-hidden {
 
 .services .control:active {
   width: 277px;
+  padding-right: 117px;
 
-  text-align: left;
   color: #f7e184;
 
   background-color: #000000;
@@ -470,11 +470,11 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.inner-page.footer-logo:hover {
+.footer-logo:hover {
   opacity: 0.6;
 }
 
-.inner-page.footer-logo:active {
+.footer-logo:active {
   opacity: 0.3;
 }
 
@@ -606,7 +606,6 @@ input[type="radio"].visually-hidden {
 /* Стили для секции Каталог моноподов для селфи */
 
 .item-catalog h3 {
-  padding-left: 62px;
   margin: 0;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
@@ -655,10 +654,6 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.filter-input:disabled+label {
-  color: #a6a6a6;
-}
-
 .filter button {
   line-height: normal;
 
@@ -669,15 +664,14 @@ input[type="radio"].visually-hidden {
 /* Сортировка */
 
 .sorting a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   font-size: 14px;
   letter-spacing: normal;
   line-height: 18px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
-}
-
-.sorting-current a {
-  color: rgba(0, 0, 0, 1);
 }
 
 .sorting a:hover,
@@ -761,15 +755,16 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-back,
-.pagination-next,
-.pagination-page-current {
+.pagination-next {
+  padding: 0 30px;
+
   color: #000000;
 }
 
-/*дивы пока оставила, так как нужны для смены фона при наведении*/
 .pagination-back:hover,
 .pagination-next:hover,
-.pagination-next-link:focus .pagination-next {
+.pagination-back:focus,
+.pagination-next:focus {
   background-color: #d9d9d9;
 }
 
@@ -1225,7 +1220,7 @@ body {
 
 .item-catalog-list li {
   width: 360px;
-  margin-right: 39px;
+  margin-right: 40px;
 }
 
 .item-catalog-list {
@@ -1251,7 +1246,7 @@ body {
 }
 
 .sorting-list li:first-child {
-  margin-right: 20px;
+  margin-right: 29px;
 }
 
 .sorting-list li:nth-child(2) {
@@ -1259,7 +1254,7 @@ body {
 }
 
 .sorting-list li:nth-child(3) {
-  margin-right: 210px;
+  margin-right: 214px;
 }
 
 .sorting-list li:nth-child(4) {
@@ -1269,19 +1264,14 @@ body {
 .item-catalog-list li {
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 49px;
+  margin-top: 37px;
 }
 
 .item-catalog-info {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 38px;
-}
-
-.item-catalog-title {
-  margin: 0;
-  width: 260px; /*можно таким способом добиваться переноса слов в заголовке?*/
+  margin-top: 30px;
 }
 
 .item-catalog-info p {
@@ -1295,12 +1285,19 @@ body {
 }
 
 .pagination {
-  line-height: 70px;
+  line-height: 71px;
 
   display: flex;
-  justify-content: space-between;
-  margin-top: 41px;
-  margin-bottom: 77px;
+  margin-top: 26px;
+  margin-bottom: 76px;
+}
+
+.pagination-back {
+  margin-right: 210px;
+}
+
+.pagination-next {
+  margin-left: auto;
 }
 
 .pagination-list {
@@ -1308,12 +1305,7 @@ body {
 }
 
 .pagination-list li {
-  margin-right: 30px
-}
-
-.pagination-back,
-.pagination-next {
-  padding: 0 30px;
+  margin-right: 27px;
 }
 
 /*МИКРОСЕТКИ*/
@@ -1706,18 +1698,18 @@ body {
   padding-top: 23px;
 }
 
-/* .footer-username a {    доделать
+.footer-username a {
   position: relative;
 
-  padding-left: px;
+  padding-left: 29px;
 }
 
 .footer-username a::before {
   content: "";
 
   position: absolute;
-  top: px;
-  left: 0;
+  top: 29px;
+  left: 3px;
 
   width: 13px;
   height: 12px;
@@ -1725,7 +1717,7 @@ body {
   background-image: url("../img/footer-user.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-} */
+}
 
 .footer-wrapper-navigation {
   padding-top: 16px;
@@ -1851,6 +1843,10 @@ body {
 
 /*фильтр*/
 
+.filter h3 {
+  margin-left: 60px;
+}
+
 .item-catalog fieldset {
   padding: 0;
   margin: 0;
@@ -1915,6 +1911,12 @@ ul.bluetooth-filter-list {
   padding-left: 38px;
 }
 
+.filter .control {
+  width: 200px;
+  padding: 0;
+  margin-top: 32px;
+}
+
 /*чекбоксы и радиокнопки стилизация*/
 
 .color-filter-list label,
@@ -1951,6 +1953,22 @@ input[type="checkbox"]:checked + label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
+input[type="checkbox"]:checked:not(:disabled):hover + label::before,
+input[type="checkbox"]:checked:not(:disabled):focus + label::before,
+input[type="checkbox"]:not(:checked):hover + label::before,
+input[type="checkbox"]:not(:checked):focus + label::before {
+  opacity: 0.6;
+}
+
+input[type="checkbox"]:disabled + label::before,
+input[type="checkbox"]:not(:checked):disabled + label::before {
+  opacity: 0.25;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: #a6a6a6;
+}
+
 input[type="radio"]:not(:checked) + label::before,
 input[type="radio"]:checked + label::before {
   content: "";
@@ -1973,6 +1991,80 @@ input[type="radio"]:not(:checked) + label::before {
 input[type="radio"]:checked + label::before {
   background-image: url("../img/radio-on.svg");
 }
+
+input[type="radio"]:checked:not(:disabled):hover + label::before,
+input[type="radio"]:checked:not(:disabled):focus + label::before,
+input[type="radio"]:not(:checked):hover + label::before,
+input[type="radio"]:not(:checked):focus + label::before {
+  opacity: 0.6;
+}
+
+input[type="radio"]:disabled + label::before,
+input[type="radio"]:not(:checked):disabled + label::before {
+  opacity: 0.25;
+}
+
+input[type="radio"]:disabled + label {
+  color: #a6a6a6;
+}
+
+input[type="radio"]:checked:not(:disabled):active + label::before {
+  background-image: url("../img/radio-off.svg");
+}
+
+input[type="radio"]:not(:checked):not(:disabled):active + label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+/*сортировка*/
+
+a.sorting-arrow-up,
+a.sorting-arrow-down {
+  display: block;
+  width: 11px;
+  margin-top: 25px;
+  margin-left: 18px;
+
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  opacity: 0.2;
+}
+
+.sorting-arrow-up {
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.sorting-arrow-down {
+  background-image: url("../img/icon-down-dir.svg");
+}
+
+.sorting-arrow-up:hover,
+.sorting-arrow-up:focus,
+.sorting-arrow-down:hover,
+.sorting-arrow-down:focus {
+  opacity: 0.4;
+}
+
+.sorting-arrow-up:active,
+.sorting-arrow-down:active {
+  opacity: 1;
+}
+
+/*моноподы*/
+
+.item-catalog-title {
+  margin: 0;
+  width: 256px; /*не могу выровнять заголовки*/
+}
+
+.item-catalog-pic {
+  width: 360px;
+  height: 380px;
+}
+
+
+
+
 
 
 
