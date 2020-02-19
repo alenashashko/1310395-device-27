@@ -67,14 +67,21 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -356,10 +363,9 @@ img {
 }
 
 .services .control:active {
-  width: 280px;
+  width: 277px;
 
   text-align: left;
-  /*либо padding'ами*/
   color: #f7e184;
 
   background-color: #000000;
@@ -581,8 +587,7 @@ img {
   list-style: none;
 }
 
-.breadcrumbs a,
-.breadcrumbs-current {
+.breadcrumbs a {
   font-size: 14px;
   letter-spacing: 0.14px;
   line-height: 24px;
@@ -601,6 +606,7 @@ img {
 /* Стили для секции Каталог моноподов для селфи */
 
 .item-catalog h3 {
+  padding-left: 62px;
   margin: 0;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
@@ -827,7 +833,7 @@ body {
   display: block;
   width: 163px;
 
-  padding-top: 23px;
+  padding-top: 24px;
 }
 
 .header-logo img {
@@ -861,6 +867,8 @@ body {
 .main-navigation {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 35px;
 }
 
 .header-info {
@@ -1078,7 +1086,7 @@ body {
 
 .footer-logo {
   width: 163px;
-  height: 35px;
+  height: 58px;
 }
 
 .footer-wrapper-user {
@@ -1127,13 +1135,12 @@ body {
 
 .footer-wrapper-social {
   display: flex;
-  justify-content: space-between;
   padding-top: 62px;
 }
 
-/* .copyright {
+.copyright {
   margin-left: auto;
-} */
+}
 
 .inner-page .footer {
   margin-top: 0;
@@ -1163,20 +1170,21 @@ body {
 /*ДАЛЕЕ СЕТКА СТРАНИЦЫ КАТАЛОГА*/
 
 .inner-page .header {
-  margin-bottom: 44px;
+  margin-bottom: 37px;
 }
 
 .page-title {
+  padding-left: 59px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs {
   display: flex;
-  align-items: baseline;
   padding: 0;
+  padding-left: 59px;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 44px;
 }
 
 /*сетка каталога*/
@@ -1184,7 +1192,7 @@ body {
 .item-catalog {
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
-    linear-gradient(to right, #efefef 32.5%, transparent 32.5%);
+    linear-gradient(to right, #efefef 508px, transparent 508px);
   margin-bottom: 0;
 }
 
@@ -1197,8 +1205,10 @@ body {
 }
 
 .filter form {
-  width: 328px;
-  margin-top: 70px;
+  width: 201px;
+  margin-top: 69px;
+  margin-right: 68px;
+  margin-left: 59px;
 }
 
 .item-catalog-wrapper {
@@ -1312,15 +1322,15 @@ body {
 
 .header-user-navigation a { /*большие интерактивные области*/
   display: block;
-  padding-top: 16px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header-catalog-link,
 .header-info a {
   display: block;
   padding-top: 15px;
-  padding-bottom: 49px;
+  padding-bottom: 15px;
 }
 
 .site-navigation form {
@@ -1453,12 +1463,8 @@ body {
 
 /*слайдер микросетка*/
 
-.hits-control-list input[type="radio"] {
-  display: none;
-}
-
 .hits.container {
-  background-image: linear-gradient(to bottom, #f7e296 114px, transparent 114px);
+  background-image: linear-gradient(to bottom, #f7e296 113px, transparent 113px);
   background-clip: content-box;
 }
 
@@ -1508,10 +1514,6 @@ body {
 }
 
 /*сервисы микросетка*/
-
-.services-control-list input[type="radio"] {
-  display: none;
-}
 
 .services-item p {
   margin: 0;
@@ -1725,10 +1727,8 @@ body {
   background-position: 0 0;
 } */
 
-/*далее микросетка страницы каталога*/
-
 .footer-wrapper-navigation {
-  padding-top: 24px;
+  padding-top: 16px;
 }
 
 .footer-navigation a {
@@ -1755,6 +1755,8 @@ body {
 
 .footer-wrapper-social {
   position: relative;
+
+  padding-bottom: 60px;
 }
 
 .footer-wrapper-social::before {
@@ -1770,55 +1772,206 @@ body {
   background-color: #ffc600;
 }
 
-.fb-link {
-  position: relative;
-}
-
-.fb-link::before {
-  content: "";
-
-  position: absolute;
-
-  width: 32px;
-  height: 32px;
-
-  background-image: url("../img/fb.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.instagram-link {
-  position: relative;
-}
-
-.instagram-link::before {
-  content: "";
-
-  position: absolute;
-
-  width: 32px;
-  height: 32px;
-
-  background-image: url("../img/instagram.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
+.fb-link,
+.instagram-link,
 .tw-link {
   position: relative;
+
+  display: block;
+  width: 32px;
+  height: 32px;
 }
 
+.fb-link::before,
+.instagram-link::before,
 .tw-link::before {
   content: "";
 
   position: absolute;
+  top: 0;
+  left: 0;
 
   width: 32px;
   height: 32px;
 
-  background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.3;
+}
+
+.fb-link::before {
+  background-image: url("../img/fb.svg");
+}
+
+.instagram-link::before {
+  background-image: url("../img/instagram.svg");
+}
+
+.tw-link::before {
+  background-image: url("../img/twitter.svg");
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  width: 141px;
+  margin-left: 509px;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  opacity: 0.6;
+}
+
+.footer-social a:active {
+  opacity: 0.1;
+}
+
+/*далее микросетка страницы каталога*/
+
+.breadcrumbs li {
+  position: relative;
+
+  margin-right: 38px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs li::after {    /*СДЕЛАТЬ!!!!*/
+  content: "";
+
+  position: absolute;
+}
+
+.breadcrumbs-current::after {
+  display: none;
+}
+
+/*фильтр*/
+
+.item-catalog fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+.filter fieldset:first-of-type { /*ВРЕМЕННАЯ ВЫСОТА, доб свойства для label*/
+  height: 143px;
+}
+
+.filter fieldset {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.filter fieldset:nth-of-type(2) {
+  padding-bottom: 34px;
+}
+
+.filter fieldset:first-of-type::before,
+.filter fieldset:first-of-type::after {
+  content: "";
+
+  position: absolute;
+
+  width: 201px;
+  height: 3px;
+
+  background-color: #000000;
+}
+
+.filter fieldset:first-of-type::before {
+  top: 0;
+  left: 0;
+}
+
+.filter fieldset:first-of-type::after {
+  bottom: 0;
+  left: 0;
+}
+
+.filter fieldset:nth-of-type(2)::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 201px;
+  height: 3px;
+
+  background-color: #000000;
+}
+
+ul.color-filter-list,
+ul.bluetooth-filter-list {
+  margin-top: 17px;
+}
+
+.color-filter-list li,
+.bluetooth-filter-list li {
+  padding-left: 38px;
+}
+
+/*чекбоксы и радиокнопки стилизация*/
+
+.color-filter-list label,
+.bluetooth-filter-list label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+}
+
+input[type="checkbox"]:not(:checked) + label::before,
+input[type="checkbox"]:checked + label::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: -39px;
+
+  width: 23px;
+  height: 23px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type="checkbox"]:not(:checked) + label::before {
+  background-image: url("../img/checkbox-off.svg");
+}
+
+input[type="checkbox"]:checked + label::before {
+  width: 26px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+
+input[type="radio"]:not(:checked) + label::before,
+input[type="radio"]:checked + label::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: -39px;
+
+  width: 25px;
+  height: 25px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type="radio"]:not(:checked) + label::before {
+  background-image: url("../img/radio-off.svg");
+}
+
+input[type="radio"]:checked + label::before {
+  background-image: url("../img/radio-on.svg");
 }
 
 
