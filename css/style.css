@@ -684,7 +684,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer; /*не срабатывает*/
 }
 
-.hits-control-list { /*позиционирование от секции*/
+.hits-control-list {
   position: absolute;
   bottom: 128px;
   right: 81px;
@@ -739,7 +739,7 @@ input[type="radio"].visually-hidden {
   transform: translate(-50%, -50%);
 }
 
-.monopods-img img{
+.monopods-img img {
   top: 100%;
   transform: translate(-50%, -101%);
 }
@@ -1051,7 +1051,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 44px;
   margin-bottom: 39px;
-
   /* letter-spacing: normal; по макету так, но становится хуже */
 }
 
@@ -1396,7 +1395,6 @@ input[type="radio"].visually-hidden {
   top: 1057px;
 
   display: none;
-  /*Скрывает модалку*/
   width: 960px;
   margin: 0 auto;
   /*не работает*/
@@ -1457,7 +1455,6 @@ input[type="radio"].visually-hidden {
   top: 1852px;
 
   display: none;
-  /*Скрывает модалку*/
   width: 960px;
   height: 559px;
   margin: 0 auto;
@@ -1581,7 +1578,8 @@ input[type="radio"].visually-hidden {
   background-color: #91c92f;
 }
 
-.range-toggle { /*или button, фокус с клавы нужен ?*/
+.range-toggle {
+  /*или button, фокус с клавы нужен ?*/
   position: absolute;
   top: -9px;
 
@@ -1714,7 +1712,8 @@ input[type="radio"].visually-hidden {
   margin-bottom: 10px;
 }
 
-.price legend {  /*ПЕРЕДЕЛАТЬ падинг!*/
+.price legend {
+  /*ПЕРЕДЕЛАТЬ падинг!*/
   padding-top: 13px;
   margin-bottom: 34px;
 }
@@ -2016,12 +2015,13 @@ a.sorting-arrow-down {
 }
 
 /*не работает - плохо сраб, нет курсора, эффекты кнопок не раб*/
-.item-catalog-pic:hover~.item-catalog-options { /*только при ховере? ховер на картинку?*/
+.item-catalog-pic:hover~.item-catalog-options {
+  /*только при ховере? ховер на картинку?*/
   display: block;
 }
 
- .item-catalog-compare:hover,
-.item-catalog-compare:focus /*?*/ {
+.item-catalog-compare:hover,
+.item-catalog-compare:focus {  /*?*/
   color: rgba(0, 0, 0, 1);
 }
 
@@ -2175,4 +2175,3 @@ a.sorting-arrow-down {
 .pagination-list li:last-child {
   margin-right: 0;
 }
-
