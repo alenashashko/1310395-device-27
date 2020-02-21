@@ -135,8 +135,7 @@ input[type="radio"].visually-hidden {
 /* HEADER */
 
 .header-user-navigation,
-.header-catalog-list,
-.header-info {
+.main-navigation ul {
   margin: 0;
   padding: 0;
 
@@ -146,7 +145,6 @@ input[type="radio"].visually-hidden {
 .header-user-navigation {
   display: flex;
   width: 500px;
-  /*или лучше min-width?*/
 }
 
 .header-user-navigation a {
@@ -204,9 +202,8 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/*уровень вложенности?*/
-.header-catalog-link:hover~.header-catalog-list,
-.header-catalog-link:focus~.header-catalog-list {
+.header-catalog:hover .header-catalog-list,
+.header-catalog:focus .header-catalog-list {
   display: block;
 }
 
@@ -303,16 +300,14 @@ input[type="radio"].visually-hidden {
 }
 
 .header.container {
-  position: relative;
-
   background-image: linear-gradient(to bottom, transparent 40px, #f7e296 40px);
   background-clip: content-box;
 }
 
 .header-wrapper {
-  width: 1040px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+
+  padding: 0 60px;
 }
 
 .site-navigation {
@@ -335,7 +330,6 @@ input[type="radio"].visually-hidden {
 .header-info {
   display: flex;
   width: 500px;
-  /*или лучше min-width?*/
 }
 
 .header-delivery {
@@ -346,22 +340,16 @@ input[type="radio"].visually-hidden {
   margin-left: auto;
 }
 
-/*ТУТ ПРОБЛЕМА ОСТАЛАСЬ - неровные значения + не получится задать паддинг
-   в дальнейшем для элементов списка, так как паддинг уже задан для фона, т.е
-   нужно будет и подменю добавить класс header-wrapper*/
 .header-catalog-list {
   position: absolute;
   top: 100%;
   left: 0;
+  z-index: 1;
 
   display: none;
   width: 100%;
-  padding-left: 21px;
-  /*только так совпал с хедером*/
-  padding-right: 20px;
 
   background-color: #f7e296;
-  background-clip: content-box;
 }
 
 /* SECTION ЛУЧШИЕ ПРЕДЛОЖЕНИЯ */
@@ -455,21 +443,26 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item-img {
+  position: relative;
+
   width: 160px;
   height: 160px;
 
   line-height: 160px;
-  text-align: center;
 
   background-color: rgba(240, 197, 46, 0.5);
 }
 
 .catalog-item-img img {
-  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.catalog-item:nth-child(2) img {
-  vertical-align: bottom;
+.monopods-img img{
+  top: 100%;
+  transform: translate(-50%, -100%);
 }
 
 .catalog-item-img:hover,
@@ -780,7 +773,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   width: 480px;
   padding-left: 155px;
-  /*или лучше min-width?*/
 }
 
 .inner-page .footer-user-navigation {
@@ -811,7 +803,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 430px;
-  /*или лучше min-width?*/
   margin-left: 163px;
 }
 
@@ -967,6 +958,87 @@ input[type="radio"].visually-hidden {
 
 .item-catalog .container {
   display: flex;
+}
+
+/*ФИЛЬТР СТОИМОСТЬ*/
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background-color: #dbdbdb;
+}
+
+.range-controls .bar {
+  width: 110px;
+  height: 2px;
+
+  background-color: #91c92f;
+}
+
+.range-toggle { /*или button, фокус с клавы нужен ?*/
+  position: absolute;
+  top: -9px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #dadada;
+
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: -6px;
+}
+
+.range-toggle-max {
+  left: 109px;
+}
+
+.range-toggle:active {
+  width: 22px;
+  height: 22px;
+}
+
+.price-controls {
+  margin-bottom: 34px;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  letter-spacing: normal;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  vertical-align: top;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.price-controls input {
+  width: 54px;
+  margin: 0;
+
+  background: transparent;
+  border: none;
+}
+
+.price-controls label:nth-of-type(2) {
+  margin-left: 15px;
 }
 
 /* ФИЛЬТР */
@@ -1241,12 +1313,15 @@ input[type="radio"].visually-hidden {
   margin-right: 27px;
 }
 
+.pagination-list li:last-child {
+  margin-right: 0;
+}
+
 /*МИКРОСЕТКИ*/
 
 /*header микросетка*/
 
 .header-user-navigation a {
-  /*большие интерактивные области*/
   display: block;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1408,6 +1483,41 @@ input[type="radio"].visually-hidden {
 
 .hits-item-info .control {
   margin-top: 44px;
+}
+
+.hits-item-info {
+  position: relative;
+}
+
+.hits-item-info::before {
+  content: "";
+
+  position: absolute;
+  top: 38px;
+  left: 1px;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
+}
+
+.hits-item:first-child .hits-item-info::after {
+  content: "01";
+
+  position: absolute;
+  top: -12px;
+  right: -15px;
+
+  width: 166px;
+  height: 131px;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 179px;
+  letter-spacing: 1.79px;
+  line-height: 179px;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .hits-item-table tbody {
@@ -1764,10 +1874,18 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs li::after {
-  /*СДЕЛАТЬ!!!!*/
   content: "";
 
   position: absolute;
+  top: 13px;
+  right: -20px;
+
+  width: 4px;
+  height: 7px;
+
+  background-image: url("../img/nav-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .breadcrumbs-current::after {
@@ -1785,15 +1903,15 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-.filter fieldset:first-of-type {
-  /*ВРЕМЕННАЯ ВЫСОТА, доб свойства для label*/
-  height: 143px;
-}
-
 .filter fieldset {
   position: relative;
 
   margin-bottom: 10px;
+}
+
+.price legend {  /*ПЕРЕДЕЛАТЬ падинг!!!*/
+  padding-top: 13px;
+  margin-bottom: 34px;
 }
 
 .filter fieldset:nth-of-type(2) {
@@ -1860,6 +1978,7 @@ ul.bluetooth-filter-list {
   display: block;
 
   cursor: pointer;
+  user-select: none;
 }
 
 input[type="checkbox"]:not(:checked)+label::before,
