@@ -2088,6 +2088,10 @@ a.sorting-arrow-down {
   font-weight: 800;
 }
 
+.item-catalog-title a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .item-catalog-pic {
   width: 360px;
   height: 380px;
@@ -2160,6 +2164,8 @@ a.sorting-arrow-down {
 
 .pagination-next {
   margin-left: auto;
+  padding-right: 28px;
+  padding-left: 32px;
 }
 
 .pagination-list li {
