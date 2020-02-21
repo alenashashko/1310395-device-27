@@ -150,7 +150,7 @@ input[type="radio"].visually-hidden {
 
 .header-user-navigation a {
   display: block;
-  padding-top: 15px;
+  padding-top: 17px;
   padding-bottom: 15px;
 
   color: #000000;
@@ -276,7 +276,7 @@ input[type="radio"].visually-hidden {
   display: block;
   width: 163px;
 
-  padding-top: 24px;
+  padding-top: 23px;
 }
 
 .header-logo img {
@@ -284,7 +284,8 @@ input[type="radio"].visually-hidden {
   height: 35px;
 }
 
-.header-logo[href]:hover {
+.header-logo[href]:hover,
+.header-logo[href]:focus {
   opacity: 0.6;
 }
 
@@ -371,7 +372,7 @@ input[type="radio"].visually-hidden {
 .header-catalog-link,
 .header-info a {
   display: block;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-bottom: 15px;
 }
 
@@ -385,7 +386,7 @@ input[type="radio"].visually-hidden {
 
   position: absolute;
   top: 24px;
-  left: 2px;
+  left: 3px;
 
 
   width: 16px;
@@ -406,7 +407,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 25px;
+  top: 26px;
   left: 0;
 
   width: 13px;
@@ -593,7 +594,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hits-item-info .hits-item-slogan {
-  margin-top: 82px;
+  margin-top: 80px;
 }
 
 .hits-item-info p:nth-child(2) {
@@ -601,7 +602,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hits-item-info .control {
-  margin-top: 44px;
+  margin-top: 43px;
+  margin-left: 1px;
 }
 
 .hits-item-info {
@@ -625,7 +627,7 @@ input[type="radio"].visually-hidden {
   content: "01";
 
   position: absolute;
-  top: -12px;
+  top: -13px;
   right: -15px;
 
   width: 166px;
@@ -679,7 +681,7 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   border: 1px solid #050505;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: pointer; /*не срабатывает*/
 }
 
 .hits-control-list { /*позиционирование от секции*/
@@ -739,11 +741,11 @@ input[type="radio"].visually-hidden {
 
 .monopods-img img{
   top: 100%;
-  transform: translate(-50%, -102%);
+  transform: translate(-50%, -101%);
 }
 
 .catalog-item-img:hover,
-.catalog-item-img:focus {
+.catalog-item-link:focus .catalog-item-img {
   background-color: rgba(240, 197, 46, 1);
 }
 
@@ -751,8 +753,12 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.catalog-item h3:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .catalog {
-  margin-top: 109px;
+  margin-top: 107px;
 }
 
 .catalog-item {
@@ -826,7 +832,7 @@ input[type="radio"].visually-hidden {
 
   width: 286px;
   padding-top: 80px;
-  padding-bottom: 43px;
+  padding-bottom: 47px;
 
   border-right: 7px solid #000000;
 }
@@ -839,11 +845,11 @@ input[type="radio"].visually-hidden {
 
 .services-item p {
   margin: 0;
-  margin-top: 31px;
+  margin-top: 32px;
 }
 
 .services-control-list .control {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .services-item {
@@ -996,7 +1002,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us p:first-of-type {
-  margin-top: 44px;
+  margin-top: 43px;
 }
 
 .about-us p:nth-of-type(2) {
@@ -1045,6 +1051,8 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 44px;
   margin-bottom: 39px;
+
+  /* letter-spacing: normal; по макету так, но становится хуже */
 }
 
 .map-content {
@@ -1077,8 +1085,9 @@ input[type="radio"].visually-hidden {
 
 .footer-user-navigation a {
   display: block;
-  padding-top: 20px;
+  padding-top: 17px;
 
+  line-height: 36px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1117,7 +1126,8 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.footer-logo[href]:hover {
+.footer-logo[href]:hover,
+.footer-logo[href]:focus {
   opacity: 0.6;
 }
 
@@ -1308,7 +1318,7 @@ input[type="radio"].visually-hidden {
 
   display: flex;
   padding-top: 62px;
-  padding-bottom: 60px;
+  padding-bottom: 63px;
 }
 
 .footer-wrapper-social::before {
@@ -1368,15 +1378,14 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   width: 141px;
   margin-left: 509px;
-  }
 }
 
-.footer-social a:hover,
-.footer-social a:focus {
+.footer-social a:hover::before,
+.footer-social a:focus::before {
   opacity: 0.6;
 }
 
-.footer-social a:active {
+.footer-social a:active::before {
   opacity: 0.1;
 }
 
