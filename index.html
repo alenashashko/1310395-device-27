@@ -18,7 +18,7 @@
       <div class="site-navigation">
         <form action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="search_field">Поиск</label>
-          <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+          <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту" required>
           <button class="header-button" type="submit">Найти</button>
         </form>
         <ul class="header-user-navigation">
@@ -31,14 +31,20 @@
         <ul>
           <li class="header-catalog">
             <a class="header-catalog-link" href="#">Каталог товаров</a>
-            <ul class="header-catalog-list">
-              <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
-              <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-              <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
-              <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-              <li class="header-catalog-item"><a href="#">Умные часы</a></li>
-              <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
-            </ul>
+            <div class="header-catalog-list">
+              <ul>
+                <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
+                <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+                <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
+              </ul>
+              <ul>
+                <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+                <li class="header-catalog-item"><a href="#">Умные часы</a></li>
+              </ul>
+              <ul>
+                <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
         <ul class="header-info">
@@ -56,15 +62,15 @@
       <h2 class="visually-hidden">Лучшие предложения</h2>
       <ul class="hits-control-list">
         <li>
-          <label class="visually-hidden" for="slider_1_field">Самая длинная палка для селфи</label>
+          <label for="slider_1_field">Самая длинная палка для селфи</label>
           <input class="visually-hidden" type="radio" name="slider-group" value="slider_1" id="slider_1_field" checked>
         </li>
         <li>
-          <label class="visually-hidden" for="slider_2_field" >Мотивирующий фитнес-браслет</label>
+          <label for="slider_2_field" >Мотивирующий фитнес-браслет</label>
           <input class="visually-hidden" type="radio" name="slider-group" value="slider_2" id="slider_2_field">
         </li>
         <li>
-          <label class="visually-hidden" for="slider_3_field">Квадрокоптер с мощным лазером</label>
+          <label for="slider_3_field">Квадрокоптер с мощным лазером</label>
           <input class="visually-hidden" type="radio" name="slider-group" value="slider_3" id="slider_3_field">
         </li>
       </ul>
