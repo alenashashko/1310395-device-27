@@ -18,7 +18,7 @@
       <div class="site-navigation">
         <form action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="search_field">Поиск</label>
-          <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту">
+          <input class="search-input" type="search" name="search" id="search_field" placeholder="Поиск по сайту" required>
           <button class="header-button" type="submit">Найти</button>
         </form>
         <ul class="header-user-navigation">
@@ -29,14 +29,18 @@
         </ul>
       </div>
       <nav class="main-navigation">
-        <a class="header-catalog-link" href="#">Каталог товаров</a>
-        <ul class="header-catalog-list">
-          <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
-          <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
-          <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
-          <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
-          <li class="header-catalog-item"><a href="#">Умные часы</a></li>
-          <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+        <ul>
+          <li class="header-catalog">
+            <a class="header-catalog-link" href="#">Каталог товаров</a>
+            <ul class="header-catalog-list">
+              <li class="header-catalog-item"><a href="#">Виртуальная реальность</a></li>
+              <li class="header-catalog-item"><a href="catalog.html">Моноподы для селфи</a></li>
+              <li class="header-catalog-item"><a href="#">Экшн-камеры</a></li>
+              <li class="header-catalog-item"><a href="#">Фитнес-браслеты</a></li>
+              <li class="header-catalog-item"><a href="#">Умные часы</a></li>
+              <li class="header-catalog-item"><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="header-info">
           <li class="header-delivery"><a href="#">Доставка</a></li>
