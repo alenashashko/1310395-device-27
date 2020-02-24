@@ -1391,7 +1391,7 @@ input[type="radio"].visually-hidden {
 /* МОДАЛЬНЫЕ ОКНА */
 
 .modal {
-  position: absolute; /*нужно fixed*/
+  position: absolute;
   left: 50%;
   z-index: 1;
 
@@ -2089,17 +2089,14 @@ a.sorting-arrow-down {
   left: 0;
   z-index: 10;
 
-  width: 360px;
-  height: 380px;
+  display: none;
+  width: 100%;
+  height: 100%;
 
   background-color: rgba(238, 238, 238, 0.7);
-
-  /* display: none; */
 }
 
-/*не работает - плохо сраб, нет курсора, эффекты кнопок не раб*/
-.item-catalog-pic:hover~.item-catalog-options {
-  /*только при ховере? ховер на картинку?*/
+.item-catalog-wrapper:hover .item-catalog-options { /*про фокус, попад с клавы*/
   display: block;
 }
 
@@ -2112,14 +2109,15 @@ a.sorting-arrow-down {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.item-catalog-wrapper {
+.item-catalog-container {
   width: 760px;
 }
 
-.pagination-list,
-.item-catalog-list {
-  margin: 0;
-  padding: 0;
+.item-catalog-wrapper {
+  position: relative;
+  height: 380px; /*?*/
+
+  cursor: pointer;
 }
 
 .item-catalog-list li {
@@ -2138,6 +2136,8 @@ a.sorting-arrow-down {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   margin-top: 69px;
 }
 
@@ -2180,10 +2180,37 @@ a.sorting-arrow-down {
   height: 380px;
 }
 
+.item-catalog-list .new-mark::before {
+  content: "new";
+
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  z-index: 1;
+
+  width: 60px;
+  height: 60px;
+  padding-top: 16px;
+  padding-left: 14px;
+
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  line-height: 24px;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+
+  border: 2px solid rgb(215, 215, 215);
+  border-radius: 50%;
+}
+
 /*PAGINATION*/
 
 .pagination-list {
   display: flex;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
