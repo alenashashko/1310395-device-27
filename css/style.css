@@ -68,7 +68,7 @@ img {
   height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -1390,20 +1390,65 @@ input[type="radio"].visually-hidden {
 
 /* МОДАЛЬНЫЕ ОКНА */
 
-.feedback {
-  position: absolute;
-  top: 1057px;
+.modal {
+  position: absolute; /*нужно fixed*/
+  left: 50%;
 
   display: none;
   width: 960px;
-  margin: 0 auto;
-  /*не работает*/
+  margin-left: -480px;
 
   background-color: #ffffff;
-
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
-.feedback-field-title {
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: rgba(240, 197, 46, 0.5);
+  border: none;
+  border-radius: 50%;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 13px;
+
+  width: 29px;
+  height: 2px;
+
+  background-color: rgba(255, 255, 255, 0.5); /*цвет крестика*/
+}
+
+.modal-close::before {
+  transform: rotate(45deg); /*?*/
+}
+
+.modal-close::after {
+  transform: rotate(-45deg); /*?*/
+}
+
+.modal-feedback {
+  top: 1057px;
+
+  padding: 0 100px;
+  padding-top: 94px;
+  padding-bottom: 77px;
+}
+
+.modal-feedback label {
+  display: block;
+  margin-bottom: 6px;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 18px;
   letter-spacing: normal;
@@ -1422,10 +1467,37 @@ input[type="radio"].visually-hidden {
 }
 
 .feedback-field {
+  width: 360px;
+  padding-top: 14px;
+  padding-left: 20px;
+  padding-bottom: 19px;
+  margin-bottom: 34px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+
   background-color: #f2f2f2;
+  border: none;
 }
 
-.feedback button {
+.message {
+  width: 760px;
+  padding-bottom: 8px;
+}
+
+.modal-feedback form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-feedback button { /*не раб*/
+  width: 200px;
+  padding: 0;
+  margin-top: -1px;
+
+  background-color: inherit;
   border: none;
 }
 
@@ -1433,9 +1505,7 @@ input[type="radio"].visually-hidden {
   background-color: #eaeaea;
 }
 
-.feedback-field:focus {
-  color: #464646;
-
+.feedback-field:focus {    /*браузерный аутлайн откл?*/
   background-color: #ffffff;
   border: 3px solid #f0c52e;
 }
@@ -1444,21 +1514,10 @@ input[type="radio"].visually-hidden {
   background-color: #f6dada;
 }
 
-.feedback button {
-
-  background-color: inherit;
-  border: none;
-}
-
-.map {
-  position: absolute;
+.modal-map {
   top: 1852px;
 
-  display: none;
-  width: 960px;
   height: 559px;
-  margin: 0 auto;
-  /*не работает*/
 }
 
 /* BREADCRUMBS */

@@ -7,7 +7,6 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="img/favicon.ico" rel="icon">
-<!--   <link href="img/favicon.ico" rel="shortcut icon"> -->
 </head>
 
 <body>
@@ -350,24 +349,29 @@
     </div>
   </footer>
 
-  <section class="feedback">
+  <section class="modal modal-feedback">
     <h2 class="visually-hidden">Напишите нам</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
-      <label class="feedback-field-title" for="name_field">Ваше имя:</label>
-      <input class="feedback-field" type="text" name="name" id="name_field" placeholder="Имя Фамилия">
-      <label class="feedback-field-title" for="e-mail_field">Ваш e-mail:</label>
-      <input class="feedback-field" type="email" name="e-mail" id="e-mail_field" placeholder="email@example.com">
-      <label class="feedback-field-title" for="letter_field">Текст письма:</label>
-      <textarea class="feedback-field" name="letter" id="letter_field" rows="8"
-        placeholder="В свободной форме"></textarea>
+      <div>
+        <label for="name_field">Ваше имя:</label>
+        <input class="feedback-field" type="text" name="name" id="name_field" placeholder="Имя Фамилия">
+      </div>
+      <div>
+        <label for="e-mail_field">Ваш e-mail:</label>
+        <input class="feedback-field" type="email" name="e-mail" id="e-mail_field" placeholder="email@example.com">
+      </div>
+      <div>
+        <label for="message_field">Текст письма:</label>
+        <textarea class="feedback-field message" name="message" id="message_field" rows="8" placeholder="В свободной форме"></textarea>
+      </div>
       <button class="control" type="submit">Отправить</button>
-      <button type="reset">Закрыть</button>
+      <button class="modal-close" type="reset" aria-label="Закрыть"></button>
     </form>
   </section>
-  <section class="map">
+  <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу улица Строителей 15, Москва">
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
 
 </body>
