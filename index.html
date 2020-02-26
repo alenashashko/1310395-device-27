@@ -62,10 +62,9 @@
     <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
     <section class="hits container">
       <h2 class="visually-hidden">Лучшие предложения</h2>
-      <input class="slide-1-input visually-hidden" type="radio" name="slider-group" value="slide_1" id="slide_1_control"
-        checked>
-      <input class="slide-2-input visually-hidden" type="radio" name="slider-group" value="slide_2" id="slide_2_control">
-      <input class="slide-3-input visually-hidden" type="radio" name="slider-group" value="slide_3" id="slide_3_control">
+      <input class="hits-slide-1 visually-hidden" type="radio" name="slider-group" value="slide_1" id="slide_1_control" checked>
+      <input class="hits-slide-2 visually-hidden" type="radio" name="slider-group" value="slide_2" id="slide_2_control">
+      <input class="hits-slide-3 visually-hidden" type="radio" name="slider-group" value="slide_3" id="slide_3_control">
       <div class="hits-controls">
         <label for="slide_1_control">Самая длинная палка для селфи</label>
         <label for="slide_2_control">Мотивирующий фитнес-браслет</label>
@@ -206,21 +205,14 @@
     <section class="services">
       <div class="container">
         <h2 class="visually-hidden">Наши сервисы</h2>
-        <ul class="services-control-list">
-          <li>
-            <label class="control" for="delivery_field">Доставка</label>
-            <input class="visually-hidden" type="radio" name="slider2-group" value="delivery" id="delivery_field"
-              checked>
-          </li>
-          <li>
-            <label class="control" for="guarantee_field">Гарантия</label>
-            <input class="visually-hidden" type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
-          </li>
-          <li>
-            <label class="control" for="credit_field">Кредит</label>
-            <input class="visually-hidden" type="radio" name="slider2-group" value="credit" id="credit_field">
-          </li>
-        </ul>
+        <input class="services-slide-1 visually-hidden" type="radio" name="slider2-group" value="delivery" id="delivery_field" checked>
+        <input class="services-slide-2 visually-hidden" type="radio" name="slider2-group" value="guarantee" id="guarantee_field">
+        <input class="services-slide-3 visually-hidden" type="radio" name="slider2-group" value="credit" id="credit_field">
+        <div class="services-controls">
+          <label class="control" for="delivery_field">Доставка</label>
+          <label class="control" for="guarantee_field">Гарантия</label>
+          <label class="control" for="credit_field">Кредит</label>
+        </div>
         <ul class="services-list">
           <li class="services-item delivery">
             <h3>Доставка</h3>
@@ -230,7 +222,7 @@
               заработаем, поднимая его на ваш этаж.
             </p>
           </li>
-          <!-- <li class="services-item warranty">
+          <li class="services-item warranty">
             <h3>Гарантия</h3>
             <p>
               Если из-за возгорания купленного у нас товара у вас сгорит
@@ -245,7 +237,7 @@
               консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.
             </p>
-          </li> -->
+          </li>
         </ul>
       </div>
     </section>

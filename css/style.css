@@ -752,15 +752,15 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.slide-1-input:checked ~ .hits-list .slide-1,
-.slide-2-input:checked ~ .hits-list .slide-2,
-.slide-3-input:checked ~ .hits-list .slide-3 {
+.hits-slide-1:checked ~ .hits-list .slide-1,
+.hits-slide-2:checked ~ .hits-list .slide-2,
+.hits-slide-3:checked ~ .hits-list .slide-3 {
   display: flex;
 }
 
-.slide-1-input:checked ~ .hits-controls label:nth-child(1)::before,
-.slide-2-input:checked ~ .hits-controls label:nth-child(2)::before,
-.slide-3-input:checked ~ .hits-controls label:nth-child(3)::before {
+.hits-slide-1:checked ~ .hits-controls label:nth-child(1)::before,
+.hits-slide-2:checked ~ .hits-controls label:nth-child(2)::before,
+.hits-slide-3:checked ~ .hits-controls label:nth-child(3)::before {
   display: block;
 }
 
@@ -858,10 +858,8 @@ input[type="radio"].visually-hidden {
   color: #f7e184;
 
   background-color: #000000;
-  background-image: none;
 }
 
-.services-control-list,
 .services-list {
   margin: 0;
   padding: 0;
@@ -881,7 +879,7 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(to bottom, transparent 100px, #e5e5e5 100px);
 }
 
-.services-control-list {
+.services-controls {
   position: relative;
   z-index: 1;
 
@@ -903,22 +901,32 @@ input[type="radio"].visually-hidden {
   margin-top: 32px;
 }
 
-.services-control-list .control {
+.services-controls .control {
+  width: 160px;
   margin-bottom: 24px;
+
+  cursor: pointer;
 }
 
 .services-item {
-  padding-right: 335px;
+  display: none;
+  padding-right: 325px;
 }
 
-.services-item.delivery {
+.services-item {
   position: relative;
 }
 
-.services-item.delivery::after {
+.services-item::after {
   content: "";
 
   position: absolute;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services-item.delivery::after {
   top: 12px;
   right: 66px;
 
@@ -926,8 +934,43 @@ input[type="radio"].visually-hidden {
   height: 164px;
 
   background-image: url("../img/delivery.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+}
+
+.services-item.warranty::after {
+  top: -12px;
+  right: 45px;
+
+  width: 171px;
+  height: 194px;
+
+  background-image: url("../img/warranty.svg");
+}
+
+.services-item.credit::after {
+  top: -12px;
+  right: 69px;
+
+  width: 156px;
+  height: 186px;
+
+  background-image: url("../img/credit.svg");
+}
+
+.services-slide-1:checked ~ .services-list .delivery,
+.services-slide-2:checked ~ .services-list .warranty,
+.services-slide-3:checked ~ .services-list .credit {
+  display: block;
+}
+
+.services-slide-1:checked ~ .services-controls label:nth-child(1),
+.services-slide-2:checked ~ .services-controls label:nth-child(2),
+.services-slide-3:checked ~ .services-controls label:nth-child(3) {
+  width: 277px;
+  padding-right: 117px;
+
+  color: #f7e184;
+
+  background-color: #000000;
 }
 
 /* SECTION НАШИ БРЕНДЫ */
