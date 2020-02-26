@@ -1488,13 +1488,12 @@ input[type="radio"].visually-hidden {
 /* МОДАЛЬНЫЕ ОКНА */
 
 .modal {
-  position: absolute;
+  position: fixed;
+  top: 50%;
   left: 50%;
   z-index: 1;
 
-  display: none;
   width: 960px;
-  margin-left: -480px;
 
   background-color: #ffffff;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
@@ -1557,11 +1556,12 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback {
-  top: 1057px;
-
+  display: none;
   padding: 0 100px;
   padding-top: 93px;
   padding-bottom: 77px;
+
+  transform: translate(-50%, -50%);
 }
 
 .modal-feedback label {
@@ -1636,9 +1636,11 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map {
-  top: 1852px;
+  display: none;
 
   height: 559px;
+
+  transform: translate(-50%, -50%);
 }
 
 /* BREADCRUMBS */
