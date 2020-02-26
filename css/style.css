@@ -115,7 +115,7 @@ input[type="radio"].visually-hidden {
   top: 50%;
   z-index: -1;
   transform: translateY(-50%);
-  transition: height 0.3s;
+  transition: height 0.5s;
 
   width: 100%;
   height: 8px;
@@ -785,6 +785,8 @@ input[type="radio"].visually-hidden {
   height: 160px;
 
   background-color: rgba(240, 197, 46, 0.5);
+
+  transition: background-color 0.3s;
 }
 
 .catalog-item-img img {
@@ -1009,7 +1011,7 @@ input[type="radio"].visually-hidden {
 
 .brands-logo-color {
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
 }
 
 .brands-link:focus .brands-logo-color,
@@ -1556,12 +1558,12 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback {
+  transform: translate(-50%, -50%);
+
   display: none;
   padding: 0 100px;
   padding-top: 93px;
   padding-bottom: 77px;
-
-  transform: translate(-50%, -50%);
 }
 
 .modal-feedback label {
@@ -1636,11 +1638,11 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map {
+  transform: translate(-50%, -50%);
+
   display: none;
 
   height: 559px;
-
-  transform: translate(-50%, -50%);
 }
 
 /* BREADCRUMBS */
@@ -2344,6 +2346,8 @@ a.sorting-arrow-down {
   padding: 0 30px;
 
   color: #000000;
+
+  transition: background-color 0.3s;
 }
 
 .pagination-next:hover,
