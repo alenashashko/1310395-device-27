@@ -182,8 +182,14 @@ input[type="radio"].visually-hidden {
   text-transform: none;
 }
 
-.header-user-navigation a:hover,
-.header-user-navigation a:focus,
+.header-login a:hover,
+.header-login a:focus,
+.header-username a:hover,
+.header-username a:focus,
+.header-compare a:hover,
+.header-compare a:focus,
+.header-basket a:hover,
+.header-basket a:focus,
 .header-catalog-list a:hover,
 .header-catalog-list a:focus,
 .header-info a:hover,
@@ -191,10 +197,22 @@ input[type="radio"].visually-hidden {
   opacity: 0.6;
 }
 
-.header-user-navigation a:active,
+.header-login a:active,
+.header-username a:active,
+.header-compare a:active,
+.header-basket a:active,
 .header-catalog-list a:active,
 .header-info a:active {
   opacity: 0.3;
+}
+
+.header-logout a:hover,
+.header-logout a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-logout a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .header-catalog-link:hover,
@@ -213,12 +231,12 @@ input[type="radio"].visually-hidden {
 
 .search-input {
   display: inline-block;
-  vertical-align: bottom;
   width: 356px;
   height: 49px;
   padding: 0;
   padding-left: 37px;
 
+  vertical-align: bottom;
   color: #000000;
 
   background-color: transparent;
@@ -228,13 +246,13 @@ input[type="radio"].visually-hidden {
 
 .header-button {
   display: none;
-  vertical-align: bottom;
   width: 85px;
   height: 49px;
   margin-left: -5px;
 
   font: inherit;
   line-height: 30px;
+  vertical-align: bottom;
   color: #000000;
 
   background-color: transparent;
@@ -275,7 +293,6 @@ input[type="radio"].visually-hidden {
 .header-logo {
   display: block;
   width: 163px;
-
   padding-top: 23px;
 }
 
@@ -347,12 +364,12 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 87%;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 
   display: none;
   width: 100%;
+  padding-bottom: 34px;
   padding-left: 60px;
-  padding-bottom: 35px;
 
   background-color: #f7e296;
 }
@@ -378,6 +395,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation form {
   position: relative;
+
   padding-top: 7px;
 }
 
@@ -387,7 +405,6 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 24px;
   left: 3px;
-
 
   width: 16px;
   height: 16px;
@@ -505,7 +522,6 @@ input[type="radio"].visually-hidden {
 
 /* SECTION ЛУЧШИЕ ПРЕДЛОЖЕНИЯ - СЛАЙДЕР */
 
-.hits-control-list,
 .hits-list {
   margin: 0;
   padding: 0;
@@ -514,6 +530,9 @@ input[type="radio"].visually-hidden {
 }
 
 .hits-item-slogan {
+  position: relative;
+  z-index: 1;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
   letter-spacing: 0.47px;
@@ -543,49 +562,53 @@ input[type="radio"].visually-hidden {
 }
 
 .hits-item {
-  display: flex;
+  display: none;
 }
 
-.hits-item:first-child .hits-item-pic {
+.slide-1 .hits-item-pic {
   width: 384px;
   height: 486px;
+  margin-top: 3px;
   margin-left: 90px;
 }
 
-.hits-item:first-child .hits-item-info {
+.slide-1 .hits-item-info {
   width: 481px;
-  margin-left: 125px;
   margin-right: 80px;
+  margin-left: 125px;
 }
 
-.hits-item:nth-child(2) .hits-item-pic {
+.slide-2 .hits-item-pic {
   width: 345px;
   height: 485px;
-  margin-left: 100px;
+  margin-top: 15px;
+  margin-left: 116px;
 }
 
-.hits-item:nth-child(2) .hits-item-info {
-  width: 480px;
-  margin-left: 139px;
+.slide-2 .hits-item-info {
+  width: 481px;
   margin-right: 80px;
+  margin-left: 138px;
 }
 
-.hits-item:nth-child(3) .hits-item-pic {
+.slide-3 .hits-item-pic {
   width: 526px;
   height: 334px;
-  margin-left: 30px;
+  margin-top: 67px;
+  margin-left: 31px;
 }
 
-.hits-item:nth-child(3) .hits-item-info {
+.slide-3 .hits-item-info {
   width: 502px;
-  margin-left: 42px;
   margin-right: 60px;
+  margin-left: 42px;
 }
 
 .hits.container {
   position: relative;
+  top: -1px;
 
-  background-image: linear-gradient(to bottom, #f7e296 113px, transparent 113px);
+  background-image: linear-gradient(to bottom, #f7e296 114px, transparent 114px);
   background-clip: content-box;
 }
 
@@ -594,11 +617,15 @@ input[type="radio"].visually-hidden {
 }
 
 .hits-item-info .hits-item-slogan {
-  margin-top: 80px;
+  margin-top: 82px;
 }
 
 .hits-item-info p:nth-child(2) {
   margin-top: 19px;
+}
+
+.slide-3 p:nth-of-type(2) {
+  padding-right: 22px;
 }
 
 .hits-item-info .control {
@@ -614,7 +641,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 38px;
+  top: 40px;
   left: 1px;
 
   width: 100px;
@@ -623,15 +650,11 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.hits-item:first-child .hits-item-info::after {
-  content: "01";
-
+.hits-item-info::after {
   position: absolute;
-  top: -13px;
-  right: -15px;
+  top: -12px;
 
-  width: 166px;
-  height: 131px;
+  width: 171px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 179px;
@@ -639,6 +662,28 @@ input[type="radio"].visually-hidden {
   line-height: 179px;
   font-weight: 800;
   color: #ffffff;
+}
+
+.slide-1 .hits-item-info::after {
+  content: "01";
+
+  right: -20px;
+}
+
+.slide-2 .hits-item-info::after {
+  content: "02";
+
+  right: -28px;
+
+  width: 203px;
+}
+
+.slide-3 .hits-item-info::after {
+  content: "03";
+
+  right: -8px;
+
+  width: 205px;
 }
 
 .hits-item-table tbody {
@@ -665,34 +710,32 @@ input[type="radio"].visually-hidden {
   /*УБРАТЬ*/
 }
 
-.hits-control-list li {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.hits-control-list label {
-  position: relative;
-
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-right: 21px;
-
-  background-color: transparent;
-  border: 1px solid #050505;
-  border-radius: 50%;
-  cursor: pointer; /*не срабатывает*/
-}
-
-.hits-control-list {
+.hits-controls {
   position: absolute;
-  bottom: 128px;
+  top: 329px;
   right: 81px;
+  z-index: 10;
 
   font-size: 0;
 }
 
-.hits-control-list label::before {
+.hits-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 21px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 1px solid #050505;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hits-controls label::before {
   content: "";
 
   position: absolute;
@@ -700,13 +743,25 @@ input[type="radio"].visually-hidden {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  /* display: none; */
+  display: none;
   width: 6px;
   height: 6px;
 
   background-color: transparent;
   border: 1px solid #1f1f1f;
   border-radius: 50%;
+}
+
+.slide-1-input:checked ~ .hits-list .slide-1,
+.slide-2-input:checked ~ .hits-list .slide-2,
+.slide-3-input:checked ~ .hits-list .slide-3 {
+  display: flex;
+}
+
+.slide-1-input:checked ~ .hits-controls label:nth-child(1)::before,
+.slide-2-input:checked ~ .hits-controls label:nth-child(2)::before,
+.slide-3-input:checked ~ .hits-controls label:nth-child(3)::before {
+  display: block;
 }
 
 /* SECTION КАТАЛОГ ТОВАРОВ */
@@ -758,7 +813,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog {
-  margin-top: 107px;
+  margin-top: 104px; /*отрегулировать*/
 }
 
 .catalog-item {
@@ -820,8 +875,8 @@ input[type="radio"].visually-hidden {
 }
 
 .services {
-  padding-bottom: 70px;
   margin-top: 80px;
+  padding-bottom: 70px;
 
   background-image: linear-gradient(to bottom, transparent 100px, #e5e5e5 100px);
 }
@@ -893,6 +948,7 @@ input[type="radio"].visually-hidden {
 
 .brands-item {
   position: relative;
+
   width: 260px;
   height: 100px;
 }
@@ -1051,7 +1107,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-top: 44px;
   margin-bottom: 39px;
-  /* letter-spacing: normal; по макету так, но становится хуже */
 }
 
 .map-content {
@@ -1106,8 +1161,8 @@ input[type="radio"].visually-hidden {
 .footer-address {
   padding-top: 14px;
 
-  letter-spacing: normal;
   font-style: normal;
+  letter-spacing: normal;
   color: #ffffff;
 }
 
@@ -1299,7 +1354,6 @@ input[type="radio"].visually-hidden {
 
 .footer-wrapper-navigation {
   display: flex;
-
   padding-top: 16px;
 }
 
@@ -1490,11 +1544,11 @@ input[type="radio"].visually-hidden {
 
 .feedback-field {
   width: 360px;
+  margin-bottom: 34px;
   padding-top: 15px;
   padding-right: 0;
-  padding-left: 20px;
   padding-bottom: 19px;
-  margin-bottom: 34px;
+  padding-left: 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -1517,8 +1571,8 @@ input[type="radio"].visually-hidden {
 
 .modal-feedback .control {
   width: 200px;
-  padding: 0;
   margin-top: -1px;
+  padding: 0;
 
   background-color: inherit;
   border: none;
@@ -1547,9 +1601,9 @@ input[type="radio"].visually-hidden {
 /* BREADCRUMBS */
 
 .page-title {
-  padding-left: 59px;
   margin: 0;
   margin-bottom: 20px;
+  padding-left: 59px;
 
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 47px;
@@ -1561,10 +1615,10 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs {
   display: flex;
-  padding: 0;
-  padding-left: 59px;
   margin: 0;
   margin-bottom: 44px;
+  padding: 0;
+  padding-left: 59px;
 
   list-style: none;
 }
@@ -1629,10 +1683,11 @@ input[type="radio"].visually-hidden {
 }
 
 .item-catalog {
+  margin-bottom: 0;
+
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
     linear-gradient(to right, #efefef 508px, transparent 508px);
-  margin-bottom: 0;
 }
 
 .item-catalog .container {
@@ -1790,15 +1845,14 @@ input[type="radio"].visually-hidden {
 .filter fieldset {
   position: relative;
 
-  padding: 0;
   margin: 0;
   margin-bottom: 10px;
+  padding: 0;
 }
 
 .price legend {
-  /*ПЕРЕДЕЛАТЬ падинг!*/
-  padding-top: 13px;
   margin-bottom: 34px;
+  padding-top: 13px;
 }
 
 .filter fieldset:nth-of-type(2) {
@@ -1852,8 +1906,8 @@ ul.bluetooth-filter-list {
 
 .filter .control {
   width: 200px;
-  padding: 0;
   margin-top: 32px;
+  padding: 0;
 }
 
 /*чекбоксы и радиокнопки стилизация*/
@@ -1955,6 +2009,14 @@ input[type="radio"]:disabled+label {
 input[type="radio"]:not(:checked):not(:disabled):active+label::before {
   background-image: url("../img/radio-on.svg");
 } */
+
+input[type="checkbox"]:checked:not(:disabled):focus+label::before,
+input[type="checkbox"]:not(:checked):focus+label::before,
+input[type="radio"]:checked:not(:disabled):focus+label::before,
+input[type="radio"]:not(:checked):focus+label::before {
+  outline: 2px dotted rgba(0, 0, 0, 0.6);
+  outline-offset: 2px;
+}
 
 /* СОРТИРОВКА */
 
@@ -2115,6 +2177,7 @@ a.sorting-arrow-down {
 
 .item-catalog-wrapper {
   position: relative;
+
   height: 380px; /*?*/
 
   cursor: pointer;
@@ -2137,8 +2200,8 @@ a.sorting-arrow-down {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0;
   margin-top: 69px;
+  padding: 0;
 }
 
 .item-catalog-list li:nth-child(2n) {
@@ -2165,8 +2228,8 @@ a.sorting-arrow-down {
 }
 
 .item-catalog-title {
-  margin: 0;
   width: 256px;
+  margin: 0;
 
   font-weight: 800;
 }
