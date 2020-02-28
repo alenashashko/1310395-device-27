@@ -541,14 +541,14 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.hits-list th {
+.hits-table-features th {
   font-size: 13px;
   letter-spacing: 0.13px;
   line-height: 20px;
   font-weight: 300;
 }
 
-.hits-list td {
+.hits-table-values td {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 36px;
   letter-spacing: 0.36px;
@@ -696,18 +696,44 @@ input[type="radio"].visually-hidden {
   margin-top: 48px;
 
   border-collapse: collapse;
-
-  outline: 1px solid black;
-  /*УБРАТЬ*/
 }
 
 .hits-item-table th,
 .hits-item-table td {
+  padding: 0;
 
   text-align: left;
+}
 
-  outline: 1px solid black;
-  /*УБРАТЬ*/
+.hits-table-features,
+.hits-table-values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hits-table-features th {
+  padding-top: 8px;
+}
+
+.hits-table-values td {
+  padding-top: 3px;
+}
+
+.hits-table-features th:last-child {
+  margin-right: 67px;
+}
+
+.slide-3 .hits-table-features,
+.slide-3 .hits-table-values {
+  justify-content: flex-start;
+}
+
+.slide-3 td:last-of-type {
+  margin-left: 61px;
+}
+
+.slide-3 th:last-of-type {
+  margin-left: 50px;
 }
 
 .hits-controls {
@@ -1873,6 +1899,8 @@ input[type="radio"].visually-hidden {
 
 .filter {
   margin-right: 72px;
+
+  background-image: linear-gradient(to bottom, transparent 70px, #efefef 70px);
 }
 
 .filter form {
