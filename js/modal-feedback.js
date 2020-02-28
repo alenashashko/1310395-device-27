@@ -1,6 +1,6 @@
 let link = document.querySelector(".write-us-link");
 let popup = document.querySelector(".modal-feedback");
-let close = document.querySelector(".modal-close");
+let close = document.querySelector(".modal-feedback .modal-close");
 let name_input = document.querySelector("[name=name]");
 let email_input = document.querySelector("[name=e-mail]");
 let message_input = document.querySelector(".message");
