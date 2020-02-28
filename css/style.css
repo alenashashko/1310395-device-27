@@ -881,6 +881,8 @@ input[type="radio"].visually-hidden {
 
 .services .control {
   width: 160px;
+
+  transition: background-color 0.3s;
 }
 
 .services .control:active {
@@ -1817,6 +1819,10 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
+.filter {
+  background-image: #efefef;
+}
+
 .item-catalog {
   margin-bottom: 0;
 
@@ -1961,8 +1967,6 @@ input[type="radio"].visually-hidden {
 
 .filter {
   margin-right: 72px;
-
-  background-image: linear-gradient(to bottom, transparent 70px, #efefef 70px);
 }
 
 .filter form {
@@ -2168,10 +2172,6 @@ input[type="radio"]:not(:checked):focus+label::before {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sorting-current a {
-  color: #000000;
-}
-
 .sorting a[href]:hover,
 .sorting a[href]:focus {
   color: rgba(0, 0, 0, 0.6);
@@ -2219,10 +2219,6 @@ a.sorting-arrow-down {
   opacity: 0.2;
 }
 
-a.sorting-arrow-down {
-  opacity: 1;
-}
-
 .sorting-arrow-up {
   background-image: url("../img/icon-up-dir.svg");
 }
@@ -2231,12 +2227,21 @@ a.sorting-arrow-down {
   background-image: url("../img/icon-down-dir.svg");
 }
 
+.sorting-current a {
+  color: #000000;
+
+  opacity: 1;
+}
+
 .sorting-arrow-up[href]:hover,
-.sorting-arrow-up[href]:focus {
+.sorting-arrow-up[href]:focus,
+.sorting-arrow-down[href]:hover,
+.sorting-arrow-down[href]:focus {
   opacity: 0.4;
 }
 
-.sorting-arrow-up[href]:active {
+.sorting-arrow-up[href]:active,
+.sorting-arrow-down[href]:active {
   opacity: 1;
 }
 
@@ -2315,7 +2320,7 @@ a.sorting-arrow-down {
 .item-catalog-wrapper {
   position: relative;
 
-  height: 380px; /*?*/
+  height: 380px;
 
   cursor: pointer;
 }
