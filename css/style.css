@@ -1519,8 +1519,9 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  z-index: 10;
 
+  display: none;
   width: 960px;
 
   background-color: #ffffff;
@@ -1551,7 +1552,7 @@ input[type="radio"].visually-hidden {
   width: 29px;
   height: 2px;
 
-  background-color: rgba(255, 255, 255, 0.5); /*?*/
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .modal-close::before {
@@ -1576,6 +1577,7 @@ input[type="radio"].visually-hidden {
 
 .modal-close:active {
   background-color: rgba(240, 197, 46, 0.3);
+  outline: none;
 }
 
 .modal-close:active::before,
@@ -1586,7 +1588,6 @@ input[type="radio"].visually-hidden {
 .modal-feedback {
   transform: translate(-50%, -50%);
 
-  display: none;
   padding: 0 100px;
   padding-top: 93px;
   padding-bottom: 77px;
@@ -1666,9 +1667,53 @@ input[type="radio"].visually-hidden {
 .modal-map {
   transform: translate(-50%, -50%);
 
-  display: none;
-
   height: 559px;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -150%);
+  }
+
+  70% {
+    transform: translate(-50%, -30%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-50.5%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-49.5%, -50%);
+  }
+}
+
+.modal-error {
+  animation: shake 0.5s;
 }
 
 /* BREADCRUMBS */

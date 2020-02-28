@@ -296,7 +296,7 @@
         <a class="map-content" href="#">
           <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу улица Строителей 15, Москва">
         </a>
-        <a class="control" href="#">Напишите нам</a>
+        <a class="control write-us-link" href="#">Напишите нам</a>
       </section>
     </div>
   </main>
@@ -338,7 +338,7 @@
 
   <section class="modal modal-feedback">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class ="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div>
         <label for="name_field">Ваше имя:</label>
         <input class="feedback-field" type="text" name="name" id="name_field" placeholder="Имя Фамилия">
@@ -352,7 +352,7 @@
         <textarea class="feedback-field message" name="message" id="message_field" rows="8"
           placeholder="В свободной форме"></textarea>
       </div>
-      <button class="control" type="submit">Отправить</button>
+      <button class="control one" type="submit">Отправить</button>
       <button class="modal-close" type="reset" aria-label="Закрыть"></button>
     </form>
   </section>
@@ -361,6 +361,9 @@
     <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу улица Строителей 15, Москва">
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/modal-feedback.js"></script>
+  <script src="js/modal-map.js"></script>
 
 </body>
 
