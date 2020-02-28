@@ -224,8 +224,8 @@ input[type="radio"].visually-hidden {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.header-catalog:hover .header-catalog-list,
-.header-catalog-link:focus+.header-catalog-list {
+.header-catalog:hover .header-catalog-list {
+/* .header-catalog-link:focus+.header-catalog-list */
   display: flex;
 }
 
@@ -518,6 +518,10 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
+}
+
+.submenu-show {
+  display: flex;
 }
 
 /* SECTION ЛУЧШИЕ ПРЕДЛОЖЕНИЯ - СЛАЙДЕР */
