@@ -845,7 +845,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog {
-  margin-top: 104px; /*отрегулировать*/
+  margin-top: 94px;
 }
 
 .catalog-item {
@@ -1005,6 +1005,14 @@ input[type="radio"].visually-hidden {
   color: #f7e184;
 
   background-color: #000000;
+}
+
+.slide-1 {
+  padding-bottom: 11px;
+}
+
+.slide-3 {
+  padding-bottom: 17px;
 }
 
 /* SECTION НАШИ БРЕНДЫ */
@@ -1819,16 +1827,12 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
 }
 
-.filter {
-  background-image: #efefef;
-}
-
 .item-catalog {
   margin-bottom: 0;
 
   background-image:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px),
-    linear-gradient(to right, #efefef 508px, transparent 508px);
+    linear-gradient(to right, #efefef 33.4%, transparent 33.4%);
 }
 
 .item-catalog .container {
@@ -1967,6 +1971,9 @@ input[type="radio"].visually-hidden {
 
 .filter {
   margin-right: 72px;
+
+  background-color: #efefef;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 70px, transparent 70px);
 }
 
 .filter form {
