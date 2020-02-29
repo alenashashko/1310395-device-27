@@ -190,8 +190,8 @@ input[type="radio"].visually-hidden {
 .header-compare a:focus,
 .header-basket a:hover,
 .header-basket a:focus,
-.header-catalog-list a:hover,
-.header-catalog-list a:focus,
+.header-catalog-list a[href]:hover,
+.header-catalog-list a[href]:focus,
 .header-info a:hover,
 .header-info a:focus {
   opacity: 0.6;
@@ -201,7 +201,7 @@ input[type="radio"].visually-hidden {
 .header-username a:active,
 .header-compare a:active,
 .header-basket a:active,
-.header-catalog-list a:active,
+.header-catalog-list a[href]:active,
 .header-info a:active {
   opacity: 0.3;
 }
@@ -257,6 +257,8 @@ input[type="radio"].visually-hidden {
 
   background-color: transparent;
   border: 2px solid #000000;
+
+  cursor: pointer;
 }
 
 .search-input::placeholder {
@@ -275,6 +277,8 @@ input[type="radio"].visually-hidden {
 
 .search-input:valid~.header-button {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
 .header-button:hover,
@@ -1207,7 +1211,7 @@ input[type="radio"].visually-hidden {
 /* FOOTER */
 
 .footer {
-  margin-top: 81px;
+  margin-top: 80px;
   padding-top: 43px;
 
   background-color: #464646;
@@ -1456,7 +1460,7 @@ input[type="radio"].visually-hidden {
 
   display: flex;
   padding-top: 62px;
-  padding-bottom: 63px;
+  padding-bottom: 60px;
 }
 
 .footer-wrapper-social::before {
@@ -1554,6 +1558,8 @@ input[type="radio"].visually-hidden {
   background-color: rgb(240, 197, 46, 0.5);
   border: none;
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .modal-close::before,
@@ -1663,6 +1669,8 @@ input[type="radio"].visually-hidden {
 
   background-color: inherit;
   border: none;
+
+  cursor: pointer;
 }
 
 .feedback-field:hover {
@@ -1671,8 +1679,7 @@ input[type="radio"].visually-hidden {
 
 .feedback-field:focus {
   background-color: #ffffff;
-  border: 3px solid #f0c52e;
-  outline: none;
+  outline: 3px solid #f0c52e;
 }
 
 .feedback-field:invalid {
@@ -1862,7 +1869,6 @@ input[type="radio"].visually-hidden {
 }
 
 .range-toggle {
-  /*или button, фокус с клавы нужен ?*/
   position: absolute;
   top: -9px;
 
@@ -1885,6 +1891,7 @@ input[type="radio"].visually-hidden {
   left: 109px;
 }
 
+.range-toggle:hover,
 .range-toggle:active {
   width: 22px;
   height: 22px;
@@ -1967,6 +1974,8 @@ input[type="radio"].visually-hidden {
 
   background-color: inherit;
   border: none;
+
+  cursor: pointer;
 }
 
 .filter {
@@ -2150,14 +2159,6 @@ input[type="radio"]:disabled+label {
   color: #a6a6a6;
 }
 
-/* input[type="radio"]:checked:not(:disabled):active+label::before {
-  background-image: url("../img/radio-off.svg");
-}
-
-input[type="radio"]:not(:checked):not(:disabled):active+label::before {
-  background-image: url("../img/radio-on.svg");
-} */
-
 input[type="checkbox"]:checked:not(:disabled):focus+label::before,
 input[type="checkbox"]:not(:checked):focus+label::before,
 input[type="radio"]:checked:not(:disabled):focus+label::before,
@@ -2307,12 +2308,12 @@ a.sorting-arrow-down {
   background-color: rgba(238, 238, 238, 0.7);
 }
 
-.item-catalog-wrapper:hover .item-catalog-options { /*про фокус, попад с клавы*/
+.item-catalog-wrapper:hover .item-catalog-options {
   display: block;
 }
 
 .item-catalog-compare:hover,
-.item-catalog-compare:focus {  /*?*/
+.item-catalog-compare:focus {
   color: rgba(0, 0, 0, 1);
 }
 
