@@ -2,18 +2,12 @@ var submenuLink = document.querySelector(".header-catalog-link");
 var submenu = document.querySelector(".header-catalog-list");
 
 submenu.classList.remove("submenu-show");
-submenuLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-});
 
 submenuLink.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 13) {
+  if (evt.keyCode === 32) {
     evt.preventDefault();
+    submenu.classList.toggle("submenu-show");
   }
-});
-
-submenuLink.addEventListener("focus", function () {
-  submenu.classList.toggle("submenu-show");
 });
 
 var link = document.querySelector(".write-us-link");
@@ -99,4 +93,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
