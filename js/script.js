@@ -20,6 +20,7 @@ var form = document.querySelector(".modal-feedback-form");
 var isStorageSupport = true;
 var storage_name = "";
 var storage_email = "";
+var timer;
 
 try {
   storage_name = localStorage.getItem("name", name_input.value);
@@ -30,7 +31,10 @@ try {
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
+  clearTimeout(timer);
+  popup.classList.remove("modal-close-animation");
   popup.classList.add("modal-show");
+  popup.classList.add("modal-open-animation");
 
   if (storage_name && storage_email) {
     name_input.value = storage_name;
@@ -42,7 +46,9 @@ link.addEventListener("click", function (evt) {
 });
 
 close.addEventListener("click", function () {
-  popup.classList.remove("modal-show");
+  timer = setTimeout('popup.classList.remove("modal-show")', 5000);
+  popup.classList.remove("modal-open-animation");
+  popup.classList.add("modal-close-animation");
   popup.classList.remove("modal-error");
 });
 
@@ -65,7 +71,9 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
 
     if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
+      timer = setTimeout('popup.classList.remove("modal-show")', 5000);
+      popup.classList.remove("modal-open-animation");
+      popup.classList.add("modal-close-animation");
       popup.classList.remove("modal-error");
     }
   }
@@ -74,14 +82,21 @@ window.addEventListener("keydown", function (evt) {
 var mapLink = document.querySelector(".map-content");
 var mapPopup = document.querySelector(".modal-map");
 var mapClose = document.querySelector(".modal-map .modal-close");
+var mapTimer;
+
 
 mapLink.addEventListener("click", function (evt) {
   evt.preventDefault();
+  clearTimeout(timer);
+  mapPopup.classList.remove("modal-close-animation");
   mapPopup.classList.add("modal-show");
+  mapPopup.classList.add("modal-open-animation");
 });
 
 mapClose.addEventListener("click", function () {
-  mapPopup.classList.remove("modal-show");
+  mapTimer = setTimeout('mapPopup.classList.remove("modal-show")', 5000);
+  mapPopup.classList.remove("modal-open-animation");
+  mapPopup.classList.add("modal-close-animation");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -89,7 +104,9 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
 
     if (mapPopup.classList.contains("modal-show")) {
-      mapPopup.classList.remove("modal-show");
+      mapTimer = setTimeout('mapPopup.classList.remove("modal-show")', 5000);
+      mapPopup.classList.remove("modal-open-animation");
+      mapPopup.classList.add("modal-close-animation");
     }
   }
 });

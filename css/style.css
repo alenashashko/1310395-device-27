@@ -1547,9 +1547,17 @@ input[type="radio"].visually-hidden {
 .footer-social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 141px;
+  width: 142px;
   margin-left: 509px;
+}
+
+.footer-social li {
+  margin-right: 23px;
+  margin-bottom: 10px;
+}
+
+.footer-social li:nth-child(3n) {
+  margin-right: 0;
 }
 
 .footer-social a:hover::before,
@@ -1723,13 +1731,34 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   display: block;
+}
 
+.modal-open-animation {
   animation: bounce 0.5s;
+}
+
+.modal-close-animation {
+  animation: bounce-reverse 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bounce-reverse {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  70% {
+    transform: translate(-50%, -30%);
+  }
+
+  100% {
+    transform: translate(-50%, -200%);
+  }
 }
 
 @keyframes bounce {
   0% {
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -200%);
   }
 
   70% {
@@ -2034,6 +2063,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter fieldset {
+  position: relative;
+
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -2074,7 +2105,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  bottom: 201px;
+  bottom: 0;
   left: 0;
 
   width: 201px;
@@ -2230,7 +2261,7 @@ input[type="radio"]:not(:checked):focus+label::before {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  margin-right: 183px;
+  margin-right: 194px;
 }
 
 .sorting-features-list li {
@@ -2239,15 +2270,26 @@ input[type="radio"]:not(:checked):focus+label::before {
   line-height: 18px;
 }
 
+.sorting-directions-list {
+  display: flex;
+  align-items: center;
+}
+
+.sorting-directions-list li:last-child {
+  margin-left: 15px;
+}
+
 a.sorting-arrow-up,
 a.sorting-arrow-down {
   display: block;
-  width: 11px;
-  margin-top: 7px;
-  margin-left: 18px;
+  padding-top: 10px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  width: 16px;
 
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 100% 50%;
   opacity: 0.2;
 }
 
@@ -2446,7 +2488,9 @@ a.sorting-arrow-down {
 
 .pagination-list {
   display: flex;
-  margin: 0;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
@@ -2470,8 +2514,11 @@ a.sorting-arrow-down {
 
 .pagination-back,
 .pagination-next {
-  padding: 0 30px;
+  padding: 30px;
+  padding-top: 23px;
+  padding-bottom: 24px;
 
+  line-height: 24px;
   color: #000000;
 
   transition: background-color 0.3s;
@@ -2498,29 +2545,23 @@ a.sorting-arrow-down {
 }
 
 .pagination {
-  line-height: 71px;
-
   display: flex;
+  align-items: center;
   margin-top: 33px;
   margin-bottom: 76px;
 
   background-color: #ebebeb;
 }
 
-.pagination-back {
-  margin-right: 210px;
-}
-
 .pagination-next {
-  margin-left: auto;
   padding-right: 28px;
   padding-left: 32px;
 }
 
 .pagination-list li {
-  margin-right: 27px;
+  margin-left: 27px;
 }
 
-.pagination-list li:last-child {
-  margin-right: 0;
+.pagination-list li:first-child {
+  margin-left: 12px;
 }
