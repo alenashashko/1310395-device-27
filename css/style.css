@@ -353,7 +353,9 @@ input[type="radio"].visually-hidden {
 }
 
 .header-username {
+  width: 159px;
   margin-right: 20px;
+
 }
 
 .header-info {
@@ -737,7 +739,7 @@ input[type="radio"].visually-hidden {
   padding-top: 3px;
 }
 
-.hits-table-features th:last-child {
+.hits-table-features th:nth-child(3) {
   margin-right: 67px;
 }
 
@@ -746,12 +748,17 @@ input[type="radio"].visually-hidden {
   justify-content: flex-start;
 }
 
-.slide-3 td:last-of-type {
-  margin-left: 61px;
+.slide-3 td {
+  margin-right: 61px;
 }
 
-.slide-3 th:last-of-type {
-  margin-left: 50px;
+.slide-3 th {
+  margin-right: 50px;
+}
+
+.slide-3 td:last-child,
+.slide-3 th:last-child {
+  margin-right: 0;
 }
 
 .hits-controls {
@@ -1049,7 +1056,7 @@ input[type="radio"].visually-hidden {
 
 .brands {
   margin-top: 94px;
-  margin-bottom: 92px;
+  margin-bottom: 91px;
 }
 
 .brands-list {
@@ -1177,8 +1184,8 @@ input[type="radio"].visually-hidden {
   margin-top: 43px;
 }
 
-.about-us p:nth-of-type(2) {
-  margin-top: 31px;
+.about-us p:nth-of-type(n+2) {
+  margin-top: 32px;
 }
 
 /* SECTION КОНТАКТЫ */
@@ -1359,7 +1366,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-username {
-  margin-right: 20px;
+  width: 161px;
+  margin-right: 19px;
 }
 
 .footer-compare {
@@ -1691,6 +1699,7 @@ input[type="radio"].visually-hidden {
 
 .message {
   width: 760px;
+  resize: none;
 }
 
 .modal-feedback form {
@@ -2405,7 +2414,7 @@ a.sorting-arrow-down {
   display: flex;
   flex-direction: column-reverse;
   width: 360px;
-  margin-top: 46px;
+  margin-top: 45px;
   margin-right: 40px;
 
   list-style: none;
@@ -2492,6 +2501,7 @@ a.sorting-arrow-down {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0;
+  padding-right: 16px;
 
   list-style: none;
 }
@@ -2547,7 +2557,7 @@ a.sorting-arrow-down {
 .pagination {
   display: flex;
   align-items: center;
-  margin-top: 33px;
+  margin-top: 34px;
   margin-bottom: 76px;
 
   background-color: #ebebeb;
@@ -2562,6 +2572,4 @@ a.sorting-arrow-down {
   margin-left: 27px;
 }
 
-.pagination-list li:first-child {
-  margin-left: 12px;
-}
+
