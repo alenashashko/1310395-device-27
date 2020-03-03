@@ -2024,9 +2024,13 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 14px;
   letter-spacing: normal;
-  line-height: 24px;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.2);
+}
+
+.filter input[type="text"]:focus {
+  outline: 2px dotted rgba(0, 0, 0, 0.6);
+  outline-offset: 2px;
 }
 
 .filter-input+label {
