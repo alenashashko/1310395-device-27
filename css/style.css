@@ -789,21 +789,21 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
 }
 
-.hits-slide-1:checked ~ .hits-list .slide-1,
-.hits-slide-2:checked ~ .hits-list .slide-2,
-.hits-slide-3:checked ~ .hits-list .slide-3 {
+.hits-slide-1:checked~.hits-list .slide-1,
+.hits-slide-2:checked~.hits-list .slide-2,
+.hits-slide-3:checked~.hits-list .slide-3 {
   display: flex;
 }
 
-.hits-slide-1:checked ~ .hits-controls label:nth-child(1)::before,
-.hits-slide-2:checked ~ .hits-controls label:nth-child(2)::before,
-.hits-slide-3:checked ~ .hits-controls label:nth-child(3)::before {
+.hits-slide-1:checked~.hits-controls label:nth-child(1)::before,
+.hits-slide-2:checked~.hits-controls label:nth-child(2)::before,
+.hits-slide-3:checked~.hits-controls label:nth-child(3)::before {
   display: block;
 }
 
-.hits-slide-1:checked:focus ~ .hits-controls label:nth-child(1),
-.hits-slide-2:checked:focus ~ .hits-controls label:nth-child(2),
-.hits-slide-3:checked:focus ~ .hits-controls label:nth-child(3) {
+.hits-slide-1:checked:focus~.hits-controls label:nth-child(1),
+.hits-slide-2:checked:focus~.hits-controls label:nth-child(2),
+.hits-slide-3:checked:focus~.hits-controls label:nth-child(3) {
   outline: 2px dotted rgba(0, 0, 0, 0.6);
   outline-offset: 2px;
 }
@@ -1006,15 +1006,15 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/credit.svg");
 }
 
-.services-slide-1:checked ~ .services-list .delivery,
-.services-slide-2:checked ~ .services-list .warranty,
-.services-slide-3:checked ~ .services-list .credit {
+.services-slide-1:checked~.services-list .delivery,
+.services-slide-2:checked~.services-list .warranty,
+.services-slide-3:checked~.services-list .credit {
   display: block;
 }
 
-.services-slide-1:checked ~ .services-controls label:nth-child(1),
-.services-slide-2:checked ~ .services-controls label:nth-child(2),
-.services-slide-3:checked ~ .services-controls label:nth-child(3) {
+.services-slide-1:checked~.services-controls label:nth-child(1),
+.services-slide-2:checked~.services-controls label:nth-child(2),
+.services-slide-3:checked~.services-controls label:nth-child(3) {
   width: 280px;
   padding-right: 117px;
 
@@ -1031,9 +1031,9 @@ input[type="radio"].visually-hidden {
   padding-bottom: 17px;
 }
 
-.services-slide-1:checked:focus ~ .services-controls label:nth-child(1),
-.services-slide-2:checked:focus ~ .services-controls label:nth-child(2),
-.services-slide-3:checked:focus ~ .services-controls label:nth-child(3) {
+.services-slide-1:checked:focus~.services-controls label:nth-child(1),
+.services-slide-2:checked:focus~.services-controls label:nth-child(2),
+.services-slide-3:checked:focus~.services-controls label:nth-child(3) {
   outline: 2px dotted rgba(0, 0, 0, 0.6);
   outline-offset: 2px;
 }
@@ -1774,6 +1774,7 @@ input[type="radio"].visually-hidden {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translate(-50%, -50%);
@@ -2010,7 +2011,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter ul,
-.sorting-list,
 .sorting-list ul {
   margin: 0;
   padding: 0;
@@ -2075,7 +2075,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   padding: 0;
 }
 
@@ -2139,7 +2139,7 @@ ul.bluetooth-filter-list {
 
 .filter .control {
   width: 200px;
-  margin-top: 32px;
+  margin-top: 33px;
 }
 
 /*чекбоксы и радиокнопки стилизация*/
@@ -2580,5 +2580,3 @@ a.sorting-arrow-down {
 .pagination-list li {
   margin-left: 27px;
 }
-
-
