@@ -241,8 +241,8 @@ input[type="radio"].visually-hidden {
   padding-bottom: 15px;
   padding-left: 37px;
 
-  vertical-align: middle;
   color: #000000;
+  vertical-align: middle;
 
   background-color: transparent;
   border: none;
@@ -266,9 +266,21 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.search-input:-ms-input-placeholder {
+  padding-top: 10px;
+
+  font: inherit;
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .search-input::placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.search-input:hover:-ms-input-placeholder,
+.search-input:focus:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .search-input:hover::placeholder,
@@ -561,14 +573,14 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
-.hits-table-features th {
+.hits-item-table th {
   font-size: 13px;
   letter-spacing: 0.13px;
   line-height: 20px;
   font-weight: 300;
 }
 
-.hits-table-values td {
+.hits-item-table td {
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 36px;
   letter-spacing: 0.36px;
@@ -619,8 +631,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-3 .hits-item-info {
-  width: 502px;
-  margin-right: 60px;
+  width: 510px;
+  /* margin-right: 60px; */
   margin-left: 42px;
 }
 
@@ -645,7 +657,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-3 p:nth-of-type(2) {
-  padding-right: 22px;
+  padding-right: 30px;
 }
 
 .hits-item-info .control {
@@ -701,64 +713,38 @@ input[type="radio"].visually-hidden {
 .slide-3 .hits-item-info::after {
   content: "03";
 
-  right: -8px;
+  right: 1px;
 
   width: 205px;
 }
 
-.hits-item-table tbody {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
 .hits-item-table {
-  width: 428px;
-  margin-top: 48px;
+  margin-top: 50px;
 
   border-collapse: collapse;
 }
 
-.hits-item-table th,
-.hits-item-table td {
+.hits-item-table td,
+.hits-item-table th {
   padding: 0;
+  padding-right: 49px;
+  padding-left: 28px;
 
   text-align: left;
 }
 
-.hits-table-features,
-.hits-table-values {
-  display: flex;
-  justify-content: space-between;
+.hits-item-table td:first-of-type,
+.hits-item-table th:first-of-type {
+  padding-left: 0;
 }
 
-.hits-table-features th {
-  padding-top: 8px;
+.hits-item-table th {
+  padding-top: 9px;
 }
 
-.hits-table-values td {
-  padding-top: 3px;
-}
-
-.hits-table-features th:nth-child(3) {
-  margin-right: 67px;
-}
-
-.slide-3 .hits-table-features,
-.slide-3 .hits-table-values {
-  justify-content: flex-start;
-}
-
-.slide-3 td {
-  margin-right: 61px;
-}
-
+.slide-3 td,
 .slide-3 th {
-  margin-right: 50px;
-}
-
-.slide-3 td:last-child,
-.slide-3 th:last-child {
-  margin-right: 0;
+  padding-left: 0;
 }
 
 .hits-controls {
@@ -1601,7 +1587,7 @@ input[type="radio"].visually-hidden {
   width: 55px;
   height: 55px;
 
-  background-color: rgb(240, 197, 46, 0.5);
+  background-color: rgba(240, 197, 46, 0.5);
   border: none;
   border-radius: 50%;
 
@@ -1672,6 +1658,15 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.feedback-field:-ms-input-placeholder {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 18px;
+  font-weight: normal;
+  color: rgba(70, 70, 70, 0.4);
+}
+
 .feedback-field::placeholder {
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
@@ -1711,9 +1706,8 @@ input[type="radio"].visually-hidden {
 .modal-feedback .control {
   width: 200px;
   margin-top: 5px;
-  padding: 0;
 
-  background-color: inherit;
+  background-color: transparent;
   border: none;
 
   cursor: pointer;
@@ -2025,6 +2019,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter input[type="text"] {
+  padding: 0;
+
   font-family: "Gilroy", "Tahoma", sans-serif;
   font-size: 14px;
   letter-spacing: normal;
@@ -2043,7 +2039,7 @@ input[type="radio"].visually-hidden {
 .filter button {
   line-height: normal;
 
-  background-color: inherit;
+  background-color: transparent;
   border: none;
 
   cursor: pointer;
@@ -2077,6 +2073,10 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
+}
+
+.filter fieldset:first-of-type {
+  position: static;
 }
 
 .price legend {
@@ -2269,8 +2269,13 @@ input[type="radio"]:not(:checked):focus+label::before {
 .sorting-list .sorting-features-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   align-content: center;
-  margin-right: 194px;
+  margin-right: 193px;
+}
+
+.sorting-features-list {
+  width: 321px;
 }
 
 .sorting-features-list li {
