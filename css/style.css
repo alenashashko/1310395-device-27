@@ -147,7 +147,6 @@ input[type="radio"].visually-hidden {
 
 .header-user-navigation {
   display: flex;
-  justify-content: flex-end;
   flex-wrap: wrap;
   flex-grow: 1;
   margin-left: 20px;
@@ -357,19 +356,22 @@ input[type="radio"].visually-hidden {
 }
 
 .header-user-navigation li:nth-child(1) {
-  margin-right: auto;
   margin-left: 70px;
 }
 
-.header-basket {
-  margin-left: 41px;
+.header-compare {
+  margin-left: auto;
 }
 
 .header-logout {
-  margin-right: 66px;
+  margin-left: 19px;
 }
 
 .header-user-navigation li:nth-child(n+4) {
+  margin-left: 70px;
+}
+
+ul.header-user-navigation .header-basket {
   margin-left: 41px;
 }
 
