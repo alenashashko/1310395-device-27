@@ -876,28 +876,28 @@ ul.header-user-navigation .header-basket {
   background-position: 50% 50%;
 }
 
-.catalog-item:first-child .catalog-item-link::after {
+.catalog-item-vr .catalog-item-link::after {
   background-image: url("../img/catalog-item-1.svg");
 }
 
-.catalog-item:nth-child(2) .catalog-item-link::after {
+.catalog-item-monopods .catalog-item-link::after {
   background-image: url("../img/catalog-item-2.svg");
   background-position: 50% 95%;
 }
 
-.catalog-item:nth-child(3) .catalog-item-link::after {
+.catalog-item-cameras .catalog-item-link::after {
   background-image: url("../img/catalog-item-3.svg");
 }
 
-.catalog-item:nth-child(4) .catalog-item-link::after {
+.catalog-item-trackers .catalog-item-link::after {
   background-image: url("../img/catalog-item-4.svg");
 }
 
-.catalog-item:nth-child(5) .catalog-item-link::after {
+.catalog-item-watches .catalog-item-link::after {
   background-image: url("../img/catalog-item-5.svg");
 }
 
-.catalog-item:nth-child(6) .catalog-item-link::after {
+.catalog-item-quadrocopters .catalog-item-link::after {
   background-image: url("../img/catalog-item-6.svg");
 }
 
