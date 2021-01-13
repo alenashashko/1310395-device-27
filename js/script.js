@@ -5,7 +5,7 @@ submenu.classList.remove("submenu-show");
 
 if (submenuLink) {
   submenuLink.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 32) {
+    if (evt.code === "Space") {
       evt.preventDefault();
       submenu.classList.toggle("submenu-show");
     }
@@ -75,7 +75,7 @@ if (form) {
 }
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (evt.code === "Escape") {
     evt.preventDefault();
 
     if (popup.classList.contains("modal-show")) {
@@ -111,7 +111,7 @@ if (mapClose) {
 }
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (evt.code === "Escape") {
     evt.preventDefault();
 
     if (mapPopup.classList.contains("modal-show")) {
